@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+
+html {
+
+  p {
+    font-family: "Libre Baskerville", serif;
+  }
+
+  h1,h2,h3,h4 {
+    font-feature-settings: "salt" on;
+    font-family: "Sofia Pro", sans-serif;
+  }
+
+}

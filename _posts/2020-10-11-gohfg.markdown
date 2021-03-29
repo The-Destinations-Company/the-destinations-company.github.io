@@ -1,0 +1,16 @@
+---
+layout: posts
+title: Becoming part of goHfG
+author: Kai Magnus Müller
+category: weeknotes
+---
+
+A few weeks ago, we got an email congratulating us on getting accepted into the goHfG initiative with our Bachelor project Destinations. With goHfG, our university is now part of a larger, nationwide program called [Exist](https://www.exist.de/DE/Programm/Exist-Gruenderstipendium/inhalt.html) to foster start-ups based on university projects. The initiative at our university only launched last year and we are one of the first groups participating. That means here aren’t any successful projects that we can look at, but it’s exciting nonetheless.
+
+While we put a lot of effort and thought into Destinations, it's still a concept that needs to be fleshed out before we can apply successfully for an Exist stipend. Our first steps will be to build a team of founders and then develop an initial business model to apply for the program. 
+
+To help us doing that, we built this website to have something we can share and discuss. We also want to document our work and asked ourselves, why not just make it public and put it on the website as well? So we decided to write weeknotes on what we are doing, which you are reading right now. They might be long, short or not exactly weekly, who knows. We hope to share some insights from our research phase or dive deep into some of Destinations’ features. 
+
+See you around, 
+
+Kai Magnus

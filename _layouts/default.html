@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ site.title }}{{ title }}</title>
+
+    <meta name="description" content="{{ page.description }}">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ site.title }}{{ page.title }}">
+    <meta name="og:description" content="{{ page.description }}">
+    <meta property="og:site_name" content="Destinations">
+    <meta property="og:image" content="/twitter-image.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@_kaimagnus"/>
+    <meta name="twitter:title" content="{{ site.title }}{{ page.title }}"/>
+    <meta name="twitter:description" content="{{ page.description }}"/>
+    <meta name="twitter:image" content="http://www.build-destinations.com/twitter-image.png"/>
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="msapplication-config" content="/browserconfig.xml"/>
+    <meta name="msapplication-TileColor" content="2a4cc4">
+    <meta name="theme-color" content="2a4cc4">
+    <meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
+    <link rel="stylesheet" href="/assets/fonts/destinations-fonts.css">
+    <link rel="stylesheet" href="/assets/css/main.css?v=1.0.0">
+</head>
+<body>
+
+{% include navigation.html %}
+
+{{ content }}
+
+{% include footer.html %}
+
+
+
+</body>
+</html>

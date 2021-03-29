@@ -1,0 +1,18 @@
+---
+layout: posts
+title: "Consultation Meeting"
+author: Kai Magnus Müller
+category: weeknotes
+---
+
+We had a consultation meeting with our contact at the university this week, where we shared some updates on our progress networking and getting our project ready for presentation.
+
+Now we have a rather long list of to-dos that we'll work on. First, we will form a strategy on how we will approach potential partners or customers. In short, we want to tell people *why* they need us and our tool, instead of *asking* them to try our software. From now on we are also going to start documenting how long we need to complete tasks to get better at estimating in the future. Additionally, we will create a timeline with our goals that we want to achieve next year. 
+
+#### Building an MVP
+
+Early next year, we want to start building a prototype that will focus on exhibition planning. We believe this way we can learn more about how our users want to navigate 3D environments and placing signs - or art - in virtual space is fundamentally very similar. Our findings will eventually help us, when we start building Destinations. There's a lot more than that to talk about, so I will write a more detailed post about our MVP next year. 
+
+Other topics we discussed were networking with other startups, getting media contacts (especially interesting when our MVP is ready), sharpening our message and elevator pitch and how we want to present our project. Do we want to present it perfectly polished or confidently unfinished?
+
+I will be on vacation until February and our weeknotes will take a small break. There is however another workshop planned before Christmas, so there will be at least one more update for this year.
