@@ -1,0 +1,32 @@
+nav {
+  display: flex;
+  //background-color: $yellow-70;
+
+  @include text-standard-sofia;
+
+  .nav-link:first-child {
+    font-weight: 700;
+    margin-right: auto;
+  }
+
+  :not(:last-child, :first-child) {
+    margin-right: 90px - 30px*2;
+  }
+
+  .nav-link {
+    padding: 26px;
+
+    display: flex;
+    align-items: center;
+  }
+
+  .notification-new-post {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: $green-70;
+    margin-left: 10px;
+  }
+
+}
+

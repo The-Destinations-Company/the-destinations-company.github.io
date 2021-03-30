@@ -1,0 +1,8 @@
+- name: Destinations
+  link: /
+- name: How it Works
+  link: /howitworks/
+- name: Journal
+  link: /journal/
+- name: Studio
+  link: /studio/

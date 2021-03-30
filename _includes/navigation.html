@@ -1,0 +1,30 @@
+<nav class="nav text-standard-sofia">
+    {% for item in site.data.navigation %}
+    <div class="nav-link">
+        <a class="" href="{{ item.link }}"{% if page.url== item.link %}class="current" {% endif %}>{{ item.name }}</a>
+
+        {% if item.name == "Journal" %}
+
+        {% assign post_date = site.posts.first.date %}
+        {% assign current_time = site.time %}
+
+        {%   assign today = site.time | date: '%s'      %}
+        {%   assign start = post_date | date: '%s' %}
+        {%   assign secondsSince = today | minus: start     %}
+        {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
+        {%   assign daysSince = hoursSince | divided_by: 24  %}
+
+        {% if daysSince <= 14 %}
+
+
+        <a class="notification-new-post" href="/index.html"></a>
+
+        {% endif %}
+        {% endif %}
+
+    </div>
+
+
+
+    {% endfor %}
+</nav>

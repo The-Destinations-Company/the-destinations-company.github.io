@@ -1,0 +1,76 @@
+html, body {
+  margin: 0;
+}
+
+$border: 1px $grey-100 solid;
+
+button {
+  border-style: none;
+}
+
+//button:focus {
+//  border: $yellow-70 solid 4px;
+//  outline: none;
+//  box-sizing: border-box;
+//}
+//TODO: fokus state definieren
+
+.button {
+  @include text-large-sofia;
+
+  padding: 18px 32px;
+  border-radius: 34px;
+  display: inline-block;
+
+  span::after {
+    display: inline-block;
+    //vertical-align: top;
+    margin-bottom: -2px;
+    margin-left: 20px;
+    content: ' ';
+    background-image: url("/assets/src/arrow_up_white.svg");
+    width: 20px;
+    height: 20px;
+    color: white;
+  }
+}
+
+.button-black {
+  color: $color-button-text;
+  background-color: $color-button-background;
+}
+
+.button-yellow {
+  color: $grey-100;
+  background-color: $yellow-70;
+
+  span::after {
+    background-image: url("/assets/src/arrow_up.svg");
+  }
+
+}
+
+
+.section-yellow {
+  border-top: 1px $grey-100 solid;
+  background-color: $yellow-70;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  & > * {
+    padding: 36px;
+  }
+
+
+}
+
+.grid-3-divider {
+  & > :first-child {
+    border-right: $border;
+  }
+  & > :last-child {
+    border-left: $border;
+  }
+}

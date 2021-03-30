@@ -1,0 +1,41 @@
+.header-hero {
+  height: 75vh;
+  //background-color: $yellow-70;
+
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  p {
+    @include text-large-sofia;
+    margin-bottom: 36px;
+  }
+
+  .hero-content {
+
+  }
+}
+
+.vision {
+  padding: 95px 36px 90px 36px;
+  background-color: $yellow-30;
+  border-top: $border;
+
+  h4 {
+    margin: 14px 0;
+  }
+
+  p {
+    @include text-xlarge-sofia;
+    margin: 0 0 50px 0;
+  //  TODO: margin justieren
+  }
+}
+
+

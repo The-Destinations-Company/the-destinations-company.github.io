@@ -1,14 +1,104 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
 html {
-
   p {
     font-family: "Libre Baskerville", serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 31px;
   }
+}
 
-  h1,h2,h3,h4 {
-    font-feature-settings: "salt" on;
-    font-family: "Sofia Pro", sans-serif;
-  }
+@mixin heading-hero {
+  font-family: "Sofia Pro", sans-serif;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 116%;
+  font-feature-settings: "salt" on;
+}
 
+@mixin heading-h2 {
+  font-family: "Sofia Pro", sans-serif;
+  font-weight: bold;
+  font-size: 72px;
+  line-height: 126.4%;
+  font-feature-settings: "salt" on;
+}
+
+@mixin heading-h3 {
+  font-family: "Sofia Pro", sans-serif;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 39px;
+  font-feature-settings: "salt" on;
+}
+
+@mixin heading-h4 {
+  font-family: "Sofia Pro", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 28px;
+  font-feature-settings: 'pnum' on, 'lnum' on, "salt" on;
+  text-transform: uppercase;
+}
+
+@mixin text-xlarge-sofia {
+  font-family: "Sofia Pro", sans-serif;
+  font-weight: 600;
+  font-size: 52px;
+  line-height: 124.4%;
+  font-feature-settings: "salt" on;
+
+}
+
+@mixin text-standard-sofia {
+  font-family: "Sofia Pro", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  font-feature-settings: "salt" on;
+}
+
+@mixin text-large-sofia {
+  font-family: "Sofia Pro", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 132.3%;
+  font-feature-settings: "salt" on;
+}
+
+@mixin text-standard-bask {
+  font-family: "Libre Baskerville",serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 31px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+
+}
+
+a:visited {
+
+}
+
+h1 {
+  @include heading-hero
+}
+
+h2 {
+   @include heading-h2
+}
+
+h3 {
+  @include heading-h3
+}
+
+h4 {
+  @include heading-h4
 }
