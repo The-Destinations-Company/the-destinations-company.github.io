@@ -4,6 +4,25 @@ html, body {
 
 $border: 1px $grey-100 solid;
 
+header {
+  height: 82vh;
+  background-color: $yellow-70;
+}
+
+.header-standard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  * {
+    margin: 0;
+  }
+
+  h2 {
+    margin: 0 0 36px 36px;
+  }
+
+}
+
 button {
   border-style: none;
 }
@@ -122,3 +141,15 @@ button {
     max-width: 50%;
   }
 }
+
+.transition-fade {
+  transition: opacity .1s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+
+

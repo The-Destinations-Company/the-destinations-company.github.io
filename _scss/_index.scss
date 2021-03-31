@@ -1,12 +1,11 @@
 .header-hero {
-  height: 75vh;
-  //background-color: $yellow-70;
+  background-color: white;
 
   text-align: center;
 
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
 
   h1 {
     margin-bottom: 30px;
@@ -18,7 +17,7 @@
   }
 
   .hero-content {
-
+    margin: auto 0 auto 0;
   }
 }
 

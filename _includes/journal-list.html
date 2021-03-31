@@ -1,0 +1,35 @@
+<header class="header-standard header">
+    {% include navigation.html %}
+
+    <h2 class="">Journal</h2>
+</header>
+
+<section id="swup" class="section-white grid-3 grid-2-divider transition-fade">
+    <div class="article-list">
+
+        {% for article in site.posts %}
+
+        {% assign current_class = "" %}
+
+        {% assign in_title = include.title_a | downcase | strip %}
+        {% assign this_title = article.title | downcase | strip %}
+
+        {% if in_title == this_title %}
+        {% assign current_class = " current" %}
+        {% endif %}
+
+        <div class="article-list-item{{current_class}}">
+            <a href="{{ article.url }}">
+                <h4>{{ article.date | date: "%-d %B %Y"}}</h4>
+                <h3 class="heading-article-list">{{ article.title }}</h3>
+                <!--                    <p class="">{{ article.date | date: "%-d %B %Y"}}</p>-->
+                <p class="author">{{ article.author }}</p>
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="article-content">
+        {{ include.content_a }}
+    </div>
+
+</section>

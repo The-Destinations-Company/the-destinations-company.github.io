@@ -1,0 +1,10 @@
+---
+title: Journal
+layout: default
+---
+
+{% capture article_content %}
+{{ site.posts.first.content }}
+{% endcapture %}
+
+{% include journal-list.html content_a = article_content %}
