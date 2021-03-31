@@ -102,3 +102,7 @@ h3 {
 h4 {
   @include heading-h4
 }
+
+.text-xlarge-sofia {
+  @include text-xlarge-sofia;
+}

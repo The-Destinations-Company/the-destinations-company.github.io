@@ -61,10 +61,19 @@ button {
 
 }
 
-
 .section-yellow {
   border-top: 1px $grey-100 solid;
   background-color: $yellow-70;
+}
+
+.section-white {
+  border-top: $border;
+}
+
+.section-green {
+  border-top: $border;
+  background-color: $green-70;
+
 }
 
 .grid-3 {
@@ -81,5 +90,35 @@ button {
   }
   & > :nth-child(3) {
     border-left: $border;
+  }
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  & > * {
+    padding: 36px;
+  }
+}
+
+.grid-2-divider {
+  & > :nth-child(2n-1) {
+    border-right: $border;
+  }
+  & > :nth-child(1n+3) {
+    border-top: $border;
+  }
+}
+
+.insert-section {
+  min-height: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 36px;
+
+  :first-child {
+    max-width: 50%;
   }
 }
