@@ -1,4 +1,5 @@
 .header-hero {
+
   background-color: white;
 
   text-align: center;
@@ -8,16 +9,29 @@
   justify-content: space-between;
 
   h1 {
-    margin-bottom: 30px;
+    margin: 0;
+    // margin-bottom: 30px;
   }
 
   p {
     @include text-large-sofia;
     margin-bottom: 36px;
+    margin-top: 36px;
   }
 
   .hero-content {
     margin: auto 0 auto 0;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    
+    & > * {
+        grid-column: 2 / span 4;
+    }
+
+    & > button {
+      justify-self: center;
+    }
+
   }
 }
 
