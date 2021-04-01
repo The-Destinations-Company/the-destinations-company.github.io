@@ -78,7 +78,8 @@
 
     img {
       width: 60%;
-      height: fit-content;
+      height: -webkit-fill-available;
+      height: min-content;
     }
   }
 
