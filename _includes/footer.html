@@ -1,5 +1,30 @@
-<footer class="footer">
-	© 2020 Desitinations 
-	Based on a Bachelor Thesis by Kai Magnus Müller and Martin Wehl
-	Yoooo
+
+<footer class="section-white grid-3">
+
+    <div>
+        <h4>Destinations</h4>
+        <p>Software for signage planning and simulation</p>
+
+        <div class="sitemap">
+            {% for page in site.pages %}
+            <p><a href="{{ page.link }}">{{ page.title }}</a></p>
+            {% endfor %}
+        </div>
+        <p>Say hi hello@destinations.com</p>
+        <p>© 2020 Destinations — <a href="/imprint.html">Legal</a></p>
+    </div>
+    <div>
+        <h4>Bachelor Thesis</h4>
+        <p>B.A. Interaction Design (Spring 2020)
+            University of Applied Sciences
+            Schwäbisch Gmünd</p>
+        <p>created by<br><a href="www.kaimagnus.de">Kai Magnus Müller</a> and <a href="www.martinwehl.de"> Martin Wehl</a></p>
+        <p>supervised by<br> Prof. Marc Guntow and Prof. Daniel Utz</p>
+    </div>
+    <div>
+        <h4>GoHfG Team</h4>
+<p>Short explainations of gohfg.</p>
+        <p><a href="www.kaimagnus.de">Kai Magnus Müller</a>, <a href="www.martinwehl.de"> Martin Wehl</a> and <a href="www.JohannaWellnitz.de"> Johanna Wellnitz</a></p>
+    </div>
 </footer>
+

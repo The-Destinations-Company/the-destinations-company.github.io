@@ -10,7 +10,7 @@ html {
 }
 
 @mixin heading-hero {
-  font-family: "Sofia Pro", sans-serif;
+  font-family: "SofiaPro", sans-serif;
   font-weight: bold;
   font-size: 72px;
   line-height: 116%;
@@ -18,7 +18,7 @@ html {
 }
 
 @mixin heading-h2 {
-  font-family: "Sofia Pro", sans-serif;
+  font-family: "SofiaPro", sans-serif;
   font-weight: bold;
   font-size: 72px;
   line-height: 126.4%;
@@ -26,7 +26,7 @@ html {
 }
 
 @mixin heading-h3 {
-  font-family: "Sofia Pro", sans-serif;
+  font-family: "SofiaPro", sans-serif;
   font-weight: bold;
   font-size: 28px;
   line-height: 39px;
@@ -34,7 +34,7 @@ html {
 }
 
 @mixin heading-h4 {
-  font-family: "Sofia Pro", sans-serif;
+  font-family: "SofiaPro", sans-serif;
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
@@ -43,7 +43,7 @@ html {
 }
 
 @mixin text-xlarge-sofia {
-  font-family: "Sofia Pro", sans-serif;
+  font-family: "SofiaPro", sans-serif;
   font-weight: 600;
   font-size: 52px;
   line-height: 124.4%;
@@ -52,7 +52,7 @@ html {
 }
 
 @mixin text-standard-sofia {
-  font-family: "Sofia Pro", sans-serif;
+  font-family: "SofiaPro", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 24px;
@@ -60,7 +60,7 @@ html {
 }
 
 @mixin text-large-sofia {
-  font-family: "Sofia Pro", sans-serif;
+  font-family: "SofiaPro", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 132.3%;
@@ -101,4 +101,8 @@ h3 {
 
 h4 {
   @include heading-h4
+}
+
+.text-xlarge-sofia {
+  @include text-xlarge-sofia;
 }

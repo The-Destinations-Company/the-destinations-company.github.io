@@ -80,4 +80,3 @@ layout: default
     </div>
     <a class="button button-black"><span>Read the journal entry</span></a>
 </section>
-

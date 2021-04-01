@@ -4,6 +4,25 @@ html, body {
 
 $border: 1px $grey-100 solid;
 
+header {
+  height: 82vh;
+  background-color: $yellow-70;
+}
+
+.header-standard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  * {
+    margin: 0;
+  }
+
+  h2 {
+    margin: 0 0 36px 36px;
+  }
+
+}
+
 button {
   border-style: none;
 }
@@ -21,6 +40,13 @@ button {
   padding: 18px 32px;
   border-radius: 34px;
   display: inline-block;
+  transition: box-shadow .3s;
+
+  //&:hover {
+  //  cursor: pointer;
+  //}
+
+
 
   span::after {
     display: inline-block;
@@ -48,12 +74,25 @@ button {
     background-image: url("/assets/src/arrow_up.svg");
   }
 
-}
+  &:hover {
+    //box-shadow: #000000 0 0 20px;
+  }
 
+}
 
 .section-yellow {
   border-top: 1px $grey-100 solid;
   background-color: $yellow-70;
+}
+
+.section-white {
+  border-top: $border;
+}
+
+.section-green {
+  border-top: $border;
+  background-color: $green-70;
+
 }
 
 .grid-3 {
@@ -62,15 +101,55 @@ button {
   & > * {
     padding: 36px;
   }
-
-
 }
 
 .grid-3-divider {
   & > :first-child {
     border-right: $border;
   }
-  & > :last-child {
+  & > :nth-child(3) {
     border-left: $border;
   }
 }
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  & > * {
+    padding: 36px;
+  }
+}
+
+.grid-2-divider {
+  & > :nth-child(2n-1) {
+    border-right: $border;
+  }
+  & > :nth-child(1n+3) {
+    border-top: $border;
+  }
+}
+
+.insert-section {
+  min-height: 180px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 36px;
+
+  :first-child {
+    max-width: 50%;
+  }
+}
+
+.transition-fade {
+  transition: opacity .1s;
+  opacity: 1;
+}
+
+html.is-animating .transition-fade {
+  opacity: 0;
+}
+
+
+

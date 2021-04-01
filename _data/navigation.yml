@@ -1,8 +1,8 @@
 - name: Destinations
-  link: /
+  link: /index.html
 - name: How it Works
-  link: /howitworks/
+  link: /howitworks
 - name: Journal
-  link: /journal/
+  link: /journal
 - name: Studio
-  link: /studio/
+  link: /studio

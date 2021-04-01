@@ -1,0 +1,49 @@
+.article-list {
+
+  padding: 0;
+
+  & > :not(:last-child) {
+    border-bottom: $border;
+  }
+
+  .article-list-item {
+    padding: 20px 36px 20px;
+  }
+
+  h4 {
+    margin: 0 0 2px 0;
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  p {
+    @include text-standard-sofia;
+    margin: 10px 0 0 0;
+  }
+
+  .author {
+    display: none;
+  }
+}
+
+.article-content {
+  grid-column: 2 / -1;
+
+  p {
+    margin: 0 0 1em 0;
+
+    &:last-of-type{
+      margin-bottom: 0;
+    }
+  }
+}
+
+.current {
+  background-color: $yellow-70;
+
+  .author {
+    display: block;
+  }
+}
