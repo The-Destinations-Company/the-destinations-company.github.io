@@ -13,6 +13,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
   * {
     margin: 0;
   }
@@ -45,8 +46,6 @@ button {
   //&:hover {
   //  cursor: pointer;
   //}
-
-
 
   span::after {
     display: inline-block;
@@ -92,12 +91,17 @@ button {
 .section-green {
   border-top: $border;
   background-color: $green-70;
+}
 
+.section-purple {
+  border-top: $border;
+  background-color: $purple-70;
 }
 
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+
   & > * {
     padding: 36px;
   }
@@ -107,6 +111,7 @@ button {
   & > :first-child {
     border-right: $border;
   }
+
   & > :nth-child(3) {
     border-left: $border;
   }
@@ -115,6 +120,7 @@ button {
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+
   & > * {
     padding: 36px;
   }
@@ -124,6 +130,7 @@ button {
   & > :nth-child(2n-1) {
     border-right: $border;
   }
+
   & > :nth-child(1n+3) {
     border-top: $border;
   }
@@ -151,5 +158,56 @@ html.is-animating .transition-fade {
   opacity: 0;
 }
 
+.statement-large {
+  padding: 70px 36px 70px 36px;
 
+  h4 {
+    margin: 14px 0;
+  }
 
+  p {
+    @include text-xlarge-sofia;
+    margin: 0;
+  }
+}
+
+.use-case-container {
+  padding: 100px 0 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  .use-case-figure {
+    width: 75vw;
+    padding: 0;
+    margin: 0;
+
+    video {
+      width: inherit;
+    }
+
+    .active {
+      display: block;
+    }
+  }
+
+  .use-case-selector-group {
+    margin-top: 50px;
+  }
+
+  .use-case-selector {
+    background-color: transparent;
+    color: $grey-0;
+    @include text-standard-sofia;
+    margin: 0 16px;
+    cursor: pointer;
+
+    &.active {
+      text-decoration: underline;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
