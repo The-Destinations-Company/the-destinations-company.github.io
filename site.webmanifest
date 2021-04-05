@@ -1,0 +1,19 @@
+{
+    "name": "Destinations",
+    "short_name": "Destinations",
+    "icons": [
+        {
+            "src": "/mstile-150x150.png",
+            "sizes": "150x150",
+            "type": "image/png"
+        },
+        {
+            "src": "/apple-touch-icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#FFC949",
+    "background_color": "#FFC949",
+    "display": "standalone"
+}

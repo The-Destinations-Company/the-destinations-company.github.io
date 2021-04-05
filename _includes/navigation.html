@@ -5,12 +5,18 @@
 <!--{{ class }}-->
 <!--{{ endif }}-->
 
+{% capture pageUrl %}{{page.url}}{% endcapture %}
 
+{%  assign pageUrl = pageUrl  | split: "." %}
+{% assign pageUrl2 = pageUrl[0] | strip %}
 
 <nav class="nav text-standard-sofia">
     {% for item in site.data.navigation %}
+
+    {% assign itemLink = item.link | strip %}
+
     <div class="nav-link">
-        <a class="" href="{{ item.link }}"{% if page.url== item.link %}class="current" {% endif %}>{{ item.name }}</a>
+        <a class="" href="{{ item.link }}"{% if pageUrl2 == itemLink %}class="current"{% endif %}>{{ item.name }}</a>
 
         {% if item.name == "Journal" %}
 
