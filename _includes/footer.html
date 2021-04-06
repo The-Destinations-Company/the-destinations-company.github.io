@@ -5,8 +5,8 @@
         <p>Software for signage planning and simulation</p>
 
         <div class="sitemap">
-            {% for page in site.pages %}
-            <p><a href="{{ page.link }}">{{ page.title }}</a></p>
+            {% for link in site.html_pages %}
+            <p><a href="{{ link.path }}">{{ link.title }}</a></p>
             {% endfor %}
         </div>
         <p>Say hi hello@destinations.com</p>

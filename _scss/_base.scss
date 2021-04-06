@@ -14,14 +14,14 @@ header {
   flex-direction: column;
   justify-content: space-between;
 
-  * {
-    margin: 0;
-  }
 
   h2 {
     margin: 0 0 36px 36px;
+    width: 66%;
   }
-
+  h4 {
+    margin: 0 0 16px 40px;
+  }
 }
 
 button {
@@ -108,14 +108,19 @@ button {
 }
 
 .grid-3-divider {
-  & > :first-child {
+  & > :nth-child(3n-2) {
     border-right: $border;
   }
 
-  & > :nth-child(3) {
+  & > :nth-child(3n) {
     border-left: $border;
   }
+
+  & > :nth-child(n+4) {
+    border-top: $border;
+  }
 }
+
 
 .grid-2 {
   display: grid;

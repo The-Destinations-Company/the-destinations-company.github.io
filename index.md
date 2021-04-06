@@ -35,7 +35,7 @@ layout: default
     <div class="">
         <h4 class="">Vision</h4>
         <p class="">Based on the three main areas of focus, we created a vision for the Destinations application.</p>
-        <a class="button button-yellow" href="/concept.html"><span>Learn about the concept</span></a>
+        <a class="button button-yellow" href="/concept"><span>Learn about the concept</span></a>
     </div>
 </section>
 <section class="features-collage section-yellow">
@@ -55,20 +55,24 @@ layout: default
 </section>
 
 <section class="feature-grid section-white grid-2 grid-2-divider">
-    <div class="feature-grid-item"><img src="assets/img/shapes/shape-1.svg" alt="">
-        <h4><a href="/how.html#Route">Route Creation</a></h4>
+    <div class="feature-grid-item">
+        {% include random-shapes.html%}
+        <h4><a href="/features.html#Route">Route Creation</a></h4>
         <p>Keep track of your visitors routes.</p>
     </div>
-    <div class="feature-grid-item"><img src="assets/img/shapes/shape-2.svg" alt="">
-        <h4><a href="/how.html#Database">Signage Database</a></h4>
+    <div class="feature-grid-item">
+        {% include random-shapes.html%}
+        <h4><a href="/features.html#Database">Signage Database</a></h4>
         <p>It keeps track of everythig so you don’t have to.</p>
     </div>
-    <div class="feature-grid-item"><img src="assets/img/shapes/shape-3.svg" alt="">
-        <h4><a href="/how.html#Placement">Signage placement</a></h4>
+    <div class="feature-grid-item">
+        {% include random-shapes.html%}
+        <h4><a href="/features.html#Placement">Signage placement</a></h4>
         <p>Sign placement and exploration made easy.</p>
     </div>
-    <div class="feature-grid-item"><img src="assets/img/shapes/shape-1.svg" alt="">
-        <h4><a href="/how.html#Simulation">Simulation</a></h4>
+    <div class="feature-grid-item">
+        {% include random-shapes.html%}
+        <h4><a href="/features.html#Simulation">Simulation</a></h4>
         <p>It keeps track of everythig so you don’t have to.</p>
     </div>
 </section>

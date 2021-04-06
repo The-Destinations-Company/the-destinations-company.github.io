@@ -122,3 +122,18 @@
   }
 
 }
+
+.feature-grid-item {
+  pointer-events: none;
+  transition: background-color .2s;
+
+
+  &:hover {
+    background-color: $yellow-70;
+  }
+
+
+  a {
+    pointer-events: auto;
+  }
+}
