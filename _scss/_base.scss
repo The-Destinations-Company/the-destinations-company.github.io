@@ -216,3 +216,61 @@ html.is-animating .transition-fade {
     }
   }
 }
+
+
+@media screen and (max-width: 450px) {
+  .grid-3 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-3-divider {
+    & > :nth-child(n) {
+      border-left: none;
+      border-right: none;
+    }
+    & > :nth-child(n+2) {
+      border-top: $border;
+    }
+  }
+
+  .grid-2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .grid-2-divider {
+    & > :nth-child(2n-1) {
+      border-right: none;
+    }
+    & > :nth-child(n+2) {
+      border-top: $border;
+    }
+  }
+
+  .button {
+    padding: 16px 24px;
+
+    span::after {
+      margin-bottom: -3px;
+      margin-left: 13px;
+      width: 18px;
+      height: 18px;
+      background-size: cover;
+    }
+  }
+
+  .insert-section {
+    min-height: unset;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 36px 36px;
+
+    :first-child {
+      margin: 0 0 1.33em 0;
+      max-width: unset;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+}

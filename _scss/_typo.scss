@@ -15,6 +15,11 @@ html {
   font-size: 72px;
   line-height: 116%;
   font-feature-settings: "salt" on;
+
+  @media screen and (max-width: 450px) {
+    font-size: 36px;
+    line-height: 124%;
+  }
 }
 
 @mixin heading-h2 {
@@ -23,6 +28,11 @@ html {
   font-size: 72px;
   line-height: 126.4%;
   font-feature-settings: "salt" on;
+
+  @media screen and (max-width: 450px) {
+    font-size: 36px;
+    line-height: 124%;
+  }
 }
 
 @mixin heading-h3 {
@@ -31,6 +41,11 @@ html {
   font-size: 28px;
   line-height: 39px;
   font-feature-settings: "salt" on;
+
+  @media screen and (max-width: 450px) {
+    font-size: 28px;
+    line-height: 39px;
+  }
 }
 
 @mixin heading-h4 {
@@ -49,6 +64,10 @@ html {
   line-height: 124.4%;
   font-feature-settings: "salt" on;
 
+  @media screen and (max-width: 450px) {
+    font-size: 42px;
+    line-height: 124.4%;
+  }
 }
 
 @mixin text-standard-sofia {
@@ -65,13 +84,22 @@ html {
   font-size: 24px;
   line-height: 132.3%;
   font-feature-settings: "salt" on;
+
+  @media screen and (max-width: 450px) {
+    font-size: 20px;
+    line-height: 132.3%;
+  }
 }
 
 @mixin text-standard-bask {
-  font-family: "Libre Baskerville",serif;
+  font-family: "Libre Baskerville", serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 31px;
+
+  @media screen and (max-width: 450px) {
+
+  }
 }
 
 a {
@@ -92,7 +120,7 @@ h1 {
 }
 
 h2 {
-   @include heading-h2
+  @include heading-h2
 }
 
 h3 {

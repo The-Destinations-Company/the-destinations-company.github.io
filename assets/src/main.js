@@ -209,12 +209,14 @@ function openMailer(element) {
 
 function toggleChat() {
     document.getElementById("popup").classList.toggle("show")
+    document.getElementsByTagName("body")[0].classList.toggle("popup-open")
 }
 
 function closeChat() {
     document.getElementById("popup").classList.remove("show")
     document.getElementById("submit").disabled = true
     document.getElementById("privacy-check").checked = false
+    document.getElementsByTagName("body")[0].classList.remove("popup-open")
 }
 
 function privacyCheck(e) {
@@ -223,10 +225,27 @@ function privacyCheck(e) {
 }
 
 //TODO: disable to permanently show popup
-const popupObserver = new IntersectionObserver(closeChat, {threshold: 0.5});
-popupObserver.observe(document.getElementById("popup"))
+// const popupObserver = new IntersectionObserver(closeChat, {threshold: 0.5});
+// popupObserver.observe(document.getElementById("popup"))
 
 function handleScroll(entry) {
     console.log("test")
     closeChat()
 }
+
+window.addEventListener("keydown", function(event) {
+    if (event.defaultPrevented) {
+        return; // Do nothing if event already handled
+    }
+
+    switch (event.code) {
+        case "Escape":
+            let popupOpen = document.getElementById("popup").classList.contains("show")
+            if (!popupOpen){
+                break;
+            } else {
+                closeChat()
+            }
+            break;
+    }
+})
