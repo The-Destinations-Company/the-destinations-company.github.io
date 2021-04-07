@@ -219,15 +219,11 @@ function closeChat() {
 
 function privacyCheck(e) {
     console.log(e.checked)
-    if (e.checked) {
-        document.getElementById("submit").disabled = false
-    } else {
-        document.getElementById("submit").disabled = true
-    }
+    document.getElementById("submit").disabled = !e.checked;
 }
 
+//TODO: disable to permanently show popup
 const popupObserver = new IntersectionObserver(closeChat, {threshold: 0.5});
-
 popupObserver.observe(document.getElementById("popup"))
 
 function handleScroll(entry) {
