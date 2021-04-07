@@ -1,0 +1,149 @@
+.popup-bg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.messgage-popup {
+
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(.95) ;
+
+  margin: auto;
+  width: 800px;
+  max-width: 850px;
+  border: $border;
+  background-color: white;
+  box-shadow: 0 17px 60px rgba(0, 0, 0, 0.13);
+
+  header {
+    display: flex;
+    padding: 0 36px;
+    justify-content: space-between;
+    background-color: $yellow-70;
+    border-bottom: $border;
+  }
+
+  h3 {
+    width: auto;
+  }
+
+  .button-close {
+    display: flex;
+    padding: 3px;
+    border-radius: 0;
+    border: none;
+    /* height: fit-content; */
+    margin: auto 0;
+    background-color: transparent;
+
+    &:hover {
+
+    }
+  }
+}
+
+
+
+.reveal-effect {
+  -webkit-transform: scale(0.7);
+  -moz-transform: scale(0.7);
+  -ms-transform: scale(0.7);
+  transform: scale(0.7);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+
+.show {
+  transform: translate(-50%, -50%) scale(1);
+  visibility: visible;
+  opacity: 1;
+}
+
+.form {
+  padding: 36px;
+
+  #email {
+    margin-bottom: 36px;
+  }
+
+  #email, #bodytext {
+    width: 100%;
+    border-radius: 0;
+    border: $border;
+    min-height: 54px;
+    background-color: #E7E7E7;
+    padding: 16px;
+    box-sizing: border-box;
+  }
+
+  #email:focus, #bodytext:focus {
+    //outline-style: solid;
+    outline: none;
+    filter: brightness(95%);
+  }
+
+  p, label, #email, #bodytext {
+    @include text-standard-sofia;
+    color: #606060;
+  }
+
+  #email {
+
+  }
+
+  #bodytext {
+    resize: vertical;
+  }
+
+  input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    background-color: #E7E7E7;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    margin: auto 20px 4px 0;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .privacy-text {
+    width: 70%;
+  }
+
+  .privacy-send {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  #submit:disabled {
+    background-color: #606060;
+  }
+}
+
+.button-s {
+  @include text-large-sofia;
+  padding: 12px 24px;
+  border-radius: 34px;
+  display: inline-block;
+  transition: box-shadow .3s;
+  margin-left: auto;
+}
+
+

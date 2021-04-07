@@ -1,0 +1,27 @@
+<!--<div class="popup-bg">-->
+<div id="popup" class="messgage-popup">
+    <header>
+        <h3>Please leave a message, beeep…</h3>
+        <button class="button-close" onclick="closeChat()">
+            <img src="/assets/src/button-close.svg" alt="X">
+        </button>
+    </header>
+    <div class="form">
+        <form action="">
+            <input id="email" type="email" placeholder="email, if you wish to hear from us">
+            <textarea id="bodytext" type="text" rows="4" cols="fixed" placeholder="message"></textarea>
+
+            <div class="privacy-send">
+                <input id="privacy-check" type="checkbox" autocomplete="off" onclick="privacyCheck(this)">
+                <div class="privacy-text">
+                    <p>We will not share your message outside of our team. You will not recieve any messages from us
+                        unrelated to your inquiry. </p>
+                    <label for="privacy-check">I have read the <a href="/privacy.html">privacy policy</a></label>
+                </div>
+                <input id="submit" class="button-s button-black" type="submit" disabled>
+            </div>
+        </form>
+    </div>
+</div>
+<!--</div>-->
+

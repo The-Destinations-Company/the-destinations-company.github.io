@@ -2,7 +2,7 @@
 
 
 $(function () {
-console.log("test")
+    console.log("test")
 
     //Observer for starting and stopping use case ucvideos when they come into and goe out of view
     const observer = new IntersectionObserver(callback, {threshold: 0.8});
@@ -206,3 +206,31 @@ function openMailer(element) {
 //         document.getElementById("dev-box").classList.add("hidden")
 //     }
 // }
+
+function toggleChat() {
+    document.getElementById("popup").classList.toggle("show")
+}
+
+function closeChat() {
+    document.getElementById("popup").classList.remove("show")
+    document.getElementById("submit").disabled = true
+    document.getElementById("privacy-check").checked = false
+}
+
+function privacyCheck(e) {
+    console.log(e.checked)
+    if (e.checked) {
+        document.getElementById("submit").disabled = false
+    } else {
+        document.getElementById("submit").disabled = true
+    }
+}
+
+const popupObserver = new IntersectionObserver(closeChat, {threshold: 0.5});
+
+popupObserver.observe(document.getElementById("popup"))
+
+function handleScroll(entry) {
+    console.log("test")
+    closeChat()
+}

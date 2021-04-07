@@ -2,14 +2,14 @@
 title: Home
 layout: default
 ---
+{% include message-popup.html %}
 
 <header class="header-hero header">
     {% include navigation.html %}
-
     <div class="hero-content">
         <h1 class="heading-hero">The first spatial aware signage development environment</h1>
         <p class="text-subtitle">You’re working with signage and wayfinding systems? </p>
-        <button class="button button-black"><span>Let's Chat</span></button>
+        <button class="button button-black" onclick="toggleChat()"><span>Let's Chat</span></button>
     </div>
 </header>
 
