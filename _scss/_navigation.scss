@@ -1,16 +1,28 @@
 nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
   display: flex;
-  //background-color: $yellow-70;
+  background-color: inherit;
 
   @include text-standard-sofia;
 
-  .nav-link:first-child {
+  .nav-title {
+    display: flex;
     font-weight: 700;
     margin-right: auto;
+    z-index: 1;
+    background-color: inherit;
   }
 
   :not(:last-child, :first-child) {
     margin-right: 90px - 30px*2;
+  }
+
+  .nav-items {
+    margin-left: auto;
+    display: flex;
+    background-color: inherit;
   }
 
   .nav-link {
@@ -27,8 +39,119 @@ nav {
     background-color: $green-70;
     margin-left: 10px;
   }
+
+  #hamburger {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 450px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
 
+    .nav-title{
+      width: 100%;
+margin-right: 0;
+      box-sizing: border-box;
+    }
+
+    .nav-items {
+      margin-left: 0;
+      flex-direction: column;
+      position: absolute;
+      top: -100%;
+      transition: all .3s cubic-bezier(0.42, 0, 0.12, 0.98);
+      background-color: inherit;
+      width: 100%;
+      border-bottom: $border;
+      visibility: hidden;
+    }
+
+    .nav-link:not(.nav-title) {
+      padding: 12px 26px;
+    }
+
+    .nav-link:not(.nav-title):last-child {
+      padding-bottom: 26px;
+    }
+
+    #hamburger {
+      width: 20px;
+      height: 14px;
+      display: block;
+      margin: 0 0 0 auto;
+      //padding: 26px;
+      cursor: pointer;
+      z-index: 300;
+      background-color: unset;
+      position: relative;
+
+      div {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      div > span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: black;
+        border-radius: 2px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+      }
+
+      div > span:nth-child(1) {
+          top: 0;
+      }
+      div > span:nth-child(2) {
+        top: 7px;
+      }
+      div > span:nth-child(3) {
+        top: 7px;
+      }
+      div > span:nth-child(4) {
+        top: 14px;
+      }
+    }
+
+    #hamburger.open {
+      & > div {
+        span:nth-child(1) {
+          top: 7px;
+          width: 0%;
+          left: 50%;
+        }
+        span:nth-child(2) {
+          transform: rotate(45deg);
+        }
+        span:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+        span:nth-child(4) {
+          top: 7px;
+          width: 0%;
+          left: 50%;
+        }
+      }
+    }
+  }
+
+  #nav.open {
+    .nav-items {
+      margin-left: 0;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      visibility: initial;
+    }
+  }
 }
