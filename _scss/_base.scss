@@ -221,6 +221,10 @@ html.is-animating .transition-fade {
 @media screen and (max-width: 450px) {
   .grid-3 {
     grid-template-columns: repeat(1, 1fr);
+
+    & > * {
+      padding: 8vw;
+    }
   }
 
   .grid-3-divider {
@@ -235,6 +239,10 @@ html.is-animating .transition-fade {
 
   .grid-2 {
     grid-template-columns: repeat(1, 1fr);
+
+    & > * {
+      padding: 8vw;
+    }
   }
 
   .grid-2-divider {
@@ -262,7 +270,7 @@ html.is-animating .transition-fade {
     min-height: unset;
     flex-direction: column;
     align-items: flex-start;
-    padding: 36px 36px;
+    padding: 8vw;
 
     :first-child {
       margin: 0 0 1.33em 0;

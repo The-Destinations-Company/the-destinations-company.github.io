@@ -43,8 +43,8 @@ html {
   font-feature-settings: "salt" on;
 
   @media screen and (max-width: 450px) {
-    font-size: 28px;
-    line-height: 39px;
+    font-size: 6vw;
+    line-height: 8vw;
   }
 }
 
@@ -76,6 +76,11 @@ html {
   font-size: 18px;
   line-height: 24px;
   font-feature-settings: "salt" on;
+
+  @media screen and (max-width: 450px) {
+    font-size: 5vw;
+    line-height: 135%;
+  }
 }
 
 @mixin text-large-sofia {
