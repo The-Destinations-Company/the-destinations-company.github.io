@@ -3,6 +3,7 @@ nav {
   top: 0;
   width: 100%;
   display: flex;
+  align-items: center;
   background-color: inherit;
 
   @include text-standard-sofia;
@@ -15,7 +16,7 @@ nav {
     z-index: 1;
   }
 
-  :not(:last-child, :first-child) {
+  .nav-link:not(:last-child) {
     margin-right: 90px - 30px*2;
   }
 
@@ -23,14 +24,21 @@ nav {
     margin-left: auto;
     display: flex;
     background-color: inherit;
+    padding: 26px;
+
     z-index: 0;
   }
 
-  .nav-link {
+  .nav-title {
     padding: 26px;
 
     display: flex;
     align-items: center;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: baseline;
   }
 
   .notification-new-post {
@@ -73,16 +81,16 @@ nav {
       visibility: hidden;
     }
 
-    .nav-link {
+    .nav-link, .nav-title {
       padding: 0;
     }
 
-    .nav-link:not(.nav-title) {
-      padding: 12px 26px;
+    .nav-link {
+      padding: 12px 8vw;
     }
 
-    .nav-link:not(.nav-title):last-child {
-      padding-bottom: 26px;
+    .nav-link:last-child {
+      padding-bottom: 8vw;
     }
 
     #hamburger {

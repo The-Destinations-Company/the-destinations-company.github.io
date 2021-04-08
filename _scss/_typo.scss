@@ -1,18 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
-html {
-  p {
-    font-family: "Libre Baskerville", serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 31px;
-    @media screen and (max-width: 450px) {
-      font-size: 14px;
-      line-height: 1.6em;
-    }
-  }
-}
-
 @mixin heading-hero {
   font-family: "SofiaPro", sans-serif;
   font-weight: bold;
@@ -20,11 +7,14 @@ html {
   line-height: 116%;
   font-feature-settings: "salt" on;
 
+  @media screen and (max-width: 800px) {
+    font-size: clamp(25px, 8vw, 42px);
+  }
   @media screen and (max-width: 450px) {
-    font-size: 8vw;
-    max-font-size: 36px;
+    font-size: clamp(25px, 8vw, 38px);
     line-height: 124%;
   }
+
 }
 
 @mixin heading-h2 {
@@ -35,8 +25,12 @@ html {
   font-feature-settings: "salt" on;
 
   @media screen and (max-width: 450px) {
-    font-size: 8vw;
-    max-font-size: 36px;
+    font-size: calc(min(8vw, 36px));
+    line-height: 124%;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: calc(min(8vw, 36px));
     line-height: 124%;
   }
 }
@@ -70,9 +64,12 @@ html {
   line-height: 124.4%;
   font-feature-settings: "salt" on;
 
+  @media screen and (max-width: 800px) {
+    font-size: clamp(25px, 8vw, 42px);
+    line-height: 134%;
+  }
   @media screen and (max-width: 450px) {
-    font-size: 8vw;
-    max-font-size: 36px;
+    font-size: calc(min(8vw, 36px));
     line-height: 134%;
   }
 }
@@ -85,7 +82,7 @@ html {
   font-feature-settings: "salt" on;
 
   @media screen and (max-width: 450px) {
-    font-size: 5vw;
+    font-size: calc(min(5vw, 18px));
     line-height: 135%;
   }
 }
@@ -97,6 +94,10 @@ html {
   line-height: 132.3%;
   font-feature-settings: "salt" on;
 
+  @media screen and (max-width: 800px) {
+    font-size: clamp(18px, 5vw, 20px);
+    line-height: 132.3%;
+  }
   @media screen and (max-width: 450px) {
     font-size: 20px;
     line-height: 132.3%;
@@ -110,8 +111,14 @@ html {
   line-height: 31px;
 
   @media screen and (max-width: 450px) {
-    font-size: 20px;
+    font-size: clamp(16px, 4vw, 18px);
     line-height: 1.6em;
+  }
+}
+
+html {
+  p {
+    @include text-standard-bask;
   }
 }
 
@@ -147,3 +154,4 @@ h4 {
 .text-xlarge-sofia {
   @include text-xlarge-sofia;
 }
+

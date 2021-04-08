@@ -169,8 +169,7 @@
 }
 
 //--------------------------
-@media screen and (max-width: 450px) {
-
+@media screen and (max-width: 800px) {
   #popup-bg.showbg {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -192,7 +191,7 @@
 
     width: 100vw;
     max-width: 850px;
-    max-height: 95vh;
+    max-height: 85vh;
     border: none;
 
     header {
@@ -206,11 +205,11 @@
     }
 
     h3 {
-      margin: 1em 8vw;
+      margin: .8em 5vw;
     }
 
     .button-close {
-      padding: 8vw;
+      padding: 3vw 5vw;
     }
   }
 
@@ -221,25 +220,21 @@
   }
 
   .form {
-    padding: 8vw;
+    padding: 5vw;
 
     #email {
-      margin-bottom: 8vw;
+      margin-bottom: 5vw;
     }
 
     #email, #bodytext {
-      padding: 4vw;
+      padding: 4vh;
       margin-top: 0;
     }
 
     .privacy-send {
       grid-row-gap: 8px;
 
-      .privacy-text:first-of-type {
-        grid-column: 1 / -1;
-      }
-
-      .privacy-text:last-of-type {
+      .privacy-text {
         grid-column: 2 / -1;
       }
 
@@ -250,6 +245,34 @@
     }
     #submit:disabled {
       background-color: #606060;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .message-popup {
+    header {
+
+      h3 {
+        margin: 1em 8vw;
+      }
+
+      .button-close {
+        padding: 8vw;
+      }
+    }
+
+    .form {
+      padding: 8vw;
+
+      #email {
+        margin-bottom: 8vw;
+      }
+
+      #email, #bodytext {
+        padding: 4vw;
+        margin-top: 0;
+      }
     }
   }
 }

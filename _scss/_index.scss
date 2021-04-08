@@ -144,17 +144,46 @@
   }
 }
 
+//------------------------------------
+@media screen and (max-width: 800px) {
+  .header-hero {
+    .text-subtitle {
+      margin: 10px 8vw 4vh;
+    }
+
+    h1 {
+      margin-bottom: 2vh;
+    }
+
+    .hero-content {
+      margin: auto 0 20px 0;
+    }
+  }
+  .vision {
+    padding: 50px 28px;
+    p{
+      margin: 28px 0;
+    }
+  }
+
+  .features-collage {
+    padding: 50px 28px;
+  }
+  }
 
 @media screen and (max-width: 450px) {
 
   .header-hero {
     .text-subtitle {
-      margin-left: 8vw;
-      margin-right: 8vw;
+      margin: 2vh 8vw 4vh;
+    }
+
+    h1 {
+      margin-bottom: 2vh;
     }
 
     .hero-content {
-      margin: auto 8vw;
+      margin: auto 8vw 10vh;
     }
   }
 
@@ -207,8 +236,12 @@
     }
   }
   .feature-grid-item {
-  p{
-    margin-bottom: 0;
-  }
+    p {
+      margin-bottom: 0;
+    }
+
+    h4 {
+      margin: 0.4em 0 0.8em;
+    }
   }
 }

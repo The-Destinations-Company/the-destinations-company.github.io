@@ -27,3 +27,18 @@
   grid-auto-rows: 1fr;
 
 }
+
+@media screen and (max-width: 450px) {
+  .concept-intro {
+    padding: 60px 8vw 8vw 8vw;
+
+    .title-group p {
+      @include text-xlarge-sofia;
+      margin: 16px 0 60px 0;
+    }
+  }
+
+  .concept-features {
+    grid-auto-rows: unset;
+  }
+}

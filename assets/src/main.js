@@ -2,7 +2,7 @@
 
 
 $(function () {
-    console.log("test")
+    console.log("document ready")
 
     //Observer for starting and stopping use case ucvideos when they come into and goe out of view
     const observer = new IntersectionObserver(callback, {threshold: 0.8});
@@ -17,17 +17,22 @@ $(function () {
 
     //console.log($(".use-case-figure-group").find(">:first-child"))
 
-    try {
-        const firstFigure = $(".use-case-figure-group").find(">:first-child")
+    if($(".use-case-container").css("display") !== "none"){
+        try {
+            const firstFigure = $(".use-case-figure-group").find(">:first-child")
 
+            firstFigure.addClass("active")
+            firstFigure.children().show()
 
-        firstFigure.addClass("active")
-        firstFigure.children().show()
+            const video = firstFigure.find(">:first-child").get(0).play()
+            const firstSelector = $(".use-case-selector-group").find(">:first-child")
+            firstSelector.addClass("active")
 
-        const video = firstFigure.find(">:first-child").get(0).play()
-
-    } catch (e) {
-        console.log("no use case")
+        } catch (e) {
+            console.log("no use case")
+        }
+    } else {
+        console.log("use case hidden")
     }
 
 
@@ -39,11 +44,6 @@ $(function () {
     // fetchVideoAndPlay(video, video.getAttribute("src"))
     //
     //
-
-
-    const firstSelector = $(".use-case-selector-group").find(">:first-child")
-
-    firstSelector.addClass("active")
 
 // TODO: add active to all use cases
 
