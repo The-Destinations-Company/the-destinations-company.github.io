@@ -1,27 +1,27 @@
-<!--<div class="popup-bg">-->
-<div id="popup" class="message-popup">
-    <header>
-        <h3>Please leave a message, beeep…</h3>
-        <button class="button-close" onclick="closeChat()" autofocus>
-            <img src="/assets/src/button-close.svg" alt="X">
-        </button>
-    </header>
-    <div class="form">
-        <form action="">
-            <input id="email" type="email" placeholder="email, if you wish to hear from us">
-            <textarea id="bodytext" rows="4" cols="fixed" placeholder="message"></textarea>
+<div class="popup-wrapper">
+    <div id="popup-bg"></div>
+    <div id="popup" class="message-popup">
+        <header>
+            <h3>Please leave a message, beeep…</h3>
+            <button class="button-close" onclick="closeChat()" autofocus>
+                <img src="/assets/src/button-close.svg" alt="X">
+            </button>
+        </header>
+        <div class="form">
+            <form action="">
+                <input id="email" type="email" placeholder="email, if you wish to hear from us">
+                <textarea id="bodytext" rows="4" cols="fixed" placeholder="message"></textarea>
 
-            <div class="privacy-send">
-                <input id="privacy-check" type="checkbox" autocomplete="off" onclick="privacyCheck(this)">
-                <p class="privacy-text">We will not share your message outside of our team. You will not receive any
-                    messages from us
-                    unrelated to your inquiry. </p>
-                <label for="privacy-check" class="privacy-text">I have read the <a href="/privacy.html">privacy
-                    policy</a></label>
-                <input id="submit" class="button-s button-black" type="submit" disabled>
-            </div>
-        </form>
+                <div class="privacy-send">
+                    <input id="privacy-check" type="checkbox" autocomplete="off" onclick="privacyCheck(this)">
+                    <p class="privacy-text">We will not share your message outside of our team. You will not receive any
+                        messages from us
+                        unrelated to your inquiry. </p>
+                    <label for="privacy-check" class="privacy-text">I have read the <a href="/privacy.html">privacy
+                        policy</a></label>
+                    <input id="submit" class="button-s button-black" type="submit" disabled>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-<!--</div>-->
-

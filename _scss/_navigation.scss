@@ -11,8 +11,8 @@ nav {
     display: flex;
     font-weight: 700;
     margin-right: auto;
-    z-index: 1;
     background-color: inherit;
+    z-index: 1;
   }
 
   :not(:last-child, :first-child) {
@@ -23,6 +23,7 @@ nav {
     margin-left: auto;
     display: flex;
     background-color: inherit;
+    z-index: 0;
   }
 
   .nav-link {
@@ -50,10 +51,14 @@ nav {
     flex-direction: column;
     align-items: center;
 
-    .nav-title{
+    .nav-title {
       width: 100%;
-margin-right: 0;
+      margin-right: 0;
       box-sizing: border-box;
+
+      a {
+        padding: 8vw;
+      }
     }
 
     .nav-items {
@@ -68,6 +73,10 @@ margin-right: 0;
       visibility: hidden;
     }
 
+    .nav-link {
+      padding: 0;
+    }
+
     .nav-link:not(.nav-title) {
       padding: 12px 26px;
     }
@@ -80,10 +89,9 @@ margin-right: 0;
       width: 20px;
       height: 14px;
       display: block;
-      margin: 0 0 0 auto;
-      //padding: 26px;
+      margin: 4vw 4vw 4vw auto;
+      padding: 4vw;
       cursor: pointer;
-      z-index: 300;
       background-color: unset;
       position: relative;
 
@@ -110,17 +118,23 @@ margin-right: 0;
       }
 
       div > span:nth-child(1) {
-          top: 0;
+        top: 0;
       }
+
       div > span:nth-child(2) {
         top: 7px;
       }
+
       div > span:nth-child(3) {
         top: 7px;
       }
+
       div > span:nth-child(4) {
         top: 14px;
       }
+    }
+
+    #hamburger:hover {
     }
 
     #hamburger.open {
@@ -130,12 +144,15 @@ margin-right: 0;
           width: 0%;
           left: 50%;
         }
+
         span:nth-child(2) {
           transform: rotate(45deg);
         }
+
         span:nth-child(3) {
           transform: rotate(-45deg);
         }
+
         span:nth-child(4) {
           top: 7px;
           width: 0%;

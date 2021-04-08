@@ -1,9 +1,17 @@
-.popup-bg {
+#popup-bg {
   width: 100vw;
   height: 100vh;
   position: absolute;
   left: 0;
   top: 0;
+  //background-color: #4FCB80;
+  visibility: hidden;
+  z-index: 2;
+  transition: all .4s;
+}
+
+#popup-bg.showbg {
+  visibility: visible;
 }
 
 .message-popup {
@@ -12,12 +20,13 @@
   visibility: hidden;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
-  transition: all 0.3s;
+  transition: all .4s cubic-bezier(0.42, 0, 0.12, 0.98);
 
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%) scale(.95);
+  z-index: 2;
 
   margin: auto;
   width: 800px;
@@ -27,7 +36,7 @@
 
   header {
     display: flex;
-    padding: 0 36px;
+    //padding: 0 36px;
     justify-content: space-between;
     background-color: $yellow-70;
     border-bottom: $border;
@@ -35,16 +44,18 @@
 
   h3 {
     width: auto;
+    margin: 1em 36px;
   }
 
   .button-close {
     display: flex;
-    padding: 3px;
+    padding: 36px;
     border-radius: 0;
     border: none;
     /* height: fit-content; */
     margin: auto 0;
     background-color: transparent;
+    cursor: pointer;
 
     &:hover {
 
@@ -159,13 +170,19 @@
 
 //--------------------------
 @media screen and (max-width: 450px) {
+
+  #popup-bg.showbg {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
   .popup-open {
     overflow: hidden;
   }
 
   .message-popup {
     overflow-y: scroll;
-
+    z-index: 10;
     opacity: 1;
     position: fixed;
     left: unset;
@@ -182,14 +199,18 @@
       position: sticky;
       top: 0;
       display: flex;
-      padding: 0 8vw;
+      padding: 0;
       justify-content: space-between;
 
       border-top: $border;
     }
 
     h3 {
-      margin-right: 30px;
+      margin: 1em 8vw;
+    }
+
+    .button-close {
+      padding: 8vw;
     }
   }
 

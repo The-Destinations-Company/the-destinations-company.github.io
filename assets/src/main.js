@@ -210,6 +210,8 @@ function openMailer(element) {
 function toggleChat() {
     document.getElementById("popup").classList.toggle("show")
     document.getElementsByTagName("body")[0].classList.toggle("popup-open")
+    document.getElementById("popup-bg").classList.toggle("showbg")
+
 }
 
 function closeChat() {
@@ -217,6 +219,8 @@ function closeChat() {
     document.getElementById("submit").disabled = true
     document.getElementById("privacy-check").checked = false
     document.getElementsByTagName("body")[0].classList.remove("popup-open")
+    document.getElementById("popup-bg").classList.remove("showbg")
+
 }
 
 function privacyCheck(e) {
@@ -248,6 +252,10 @@ window.addEventListener("keydown", function(event) {
             }
             break;
     }
+})
+const popupBg = document.getElementById("popup-bg")
+popupBg.addEventListener("click", () => {
+    closeChat()
 })
 
 // HAMBURGER
