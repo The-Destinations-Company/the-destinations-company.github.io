@@ -19,6 +19,7 @@ $border: 1px $grey-100 solid;
     margin: 0 0 36px 36px;
     width: 66%;
   }
+
   h4 {
     margin: 0 0 16px 40px;
   }
@@ -176,6 +177,10 @@ html.is-animating .transition-fade {
   }
 }
 
+.simple-video {
+  display: none;
+}
+
 .use-case-container {
   padding: 100px 0 50px;
   display: flex;
@@ -232,6 +237,7 @@ html.is-animating .transition-fade {
       border-left: none;
       border-right: none;
     }
+
     & > :nth-child(n+2) {
       border-top: $border;
     }
@@ -249,6 +255,7 @@ html.is-animating .transition-fade {
     & > :nth-child(2n-1) {
       border-right: none;
     }
+
     & > :nth-child(n+2) {
       border-top: $border;
     }
@@ -280,5 +287,20 @@ html.is-animating .transition-fade {
     p {
       margin-bottom: 0;
     }
+  }
+
+  .simple-video {
+    display: block;
+
+    width: 100%;
+    padding: 8vw;
+    margin: 0;
+    figure {
+      margin: 0;
+    }
+  }
+
+  .use-case-container {
+    display: none;
   }
 }

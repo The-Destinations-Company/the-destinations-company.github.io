@@ -237,7 +237,7 @@ function handleScroll(entry) {
     closeChat()
 }
 
-window.addEventListener("keydown", function(event) {
+window.addEventListener("keydown", function (event) {
     if (event.defaultPrevented) {
         return; // Do nothing if event already handled
     }
@@ -245,7 +245,7 @@ window.addEventListener("keydown", function(event) {
     switch (event.code) {
         case "Escape":
             let popupOpen = document.getElementById("popup").classList.contains("show")
-            if (!popupOpen){
+            if (!popupOpen) {
                 break;
             } else {
                 closeChat()
@@ -253,16 +253,21 @@ window.addEventListener("keydown", function(event) {
             break;
     }
 })
+
 const popupBg = document.getElementById("popup-bg")
-popupBg.addEventListener("click", () => {
-    closeChat()
-})
+
+if (popupBg) {
+    popupBg.addEventListener("click", () => {
+        closeChat()
+    })
+}
+
 
 // HAMBURGER
 let hamburger = document.getElementById('hamburger');
 let nav = document.getElementById('nav');
-hamburger.addEventListener('click', function() {
-    if(hamburger.classList.contains('open')) {
+hamburger.addEventListener('click', function () {
+    if (hamburger.classList.contains('open')) {
         hamburger.classList.remove('open');
         nav.classList.remove('open');
     } else {

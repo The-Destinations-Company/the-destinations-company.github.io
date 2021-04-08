@@ -1,4 +1,15 @@
 {% assign usecase = site.data[include.useCaseName] %}
+
+<div class="simple-video">
+    <figure>
+    <video class="" preload="auto" muted="" playsinline controls
+           src="../assets/video/{{ usecase }}-film.mp4"></video>
+    <figcaption class="use-case-figcaption"> Text</figcaption>
+    </figure>
+</div>
+
+
+
 <div class="use-case-container">
     <div class="use-case-figure-group">
         {% for video in usecase %}

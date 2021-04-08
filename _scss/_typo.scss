@@ -6,6 +6,10 @@ html {
     font-weight: 400;
     font-size: 20px;
     line-height: 31px;
+    @media screen and (max-width: 450px) {
+      font-size: 14px;
+      line-height: 1.6em;
+    }
   }
 }
 
@@ -18,6 +22,7 @@ html {
 
   @media screen and (max-width: 450px) {
     font-size: 8vw;
+    max-font-size: 36px;
     line-height: 124%;
   }
 }
@@ -30,7 +35,8 @@ html {
   font-feature-settings: "salt" on;
 
   @media screen and (max-width: 450px) {
-    font-size: 36px;
+    font-size: 8vw;
+    max-font-size: 36px;
     line-height: 124%;
   }
 }
@@ -65,8 +71,9 @@ html {
   font-feature-settings: "salt" on;
 
   @media screen and (max-width: 450px) {
-    font-size: 42px;
-    line-height: 124.4%;
+    font-size: 8vw;
+    max-font-size: 36px;
+    line-height: 134%;
   }
 }
 
@@ -103,7 +110,8 @@ html {
   line-height: 31px;
 
   @media screen and (max-width: 450px) {
-
+    font-size: 20px;
+    line-height: 1.6em;
   }
 }
 
