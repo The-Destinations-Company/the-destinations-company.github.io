@@ -17,20 +17,20 @@ nav {
   }
 
   .nav-link:not(:last-child) {
-    margin-right: 90px - 30px*2;
+    margin-right: 45px;
   }
 
   .nav-items {
     margin-left: auto;
     display: flex;
     background-color: inherit;
-    padding: 26px;
+    padding: 26px 36px;
 
     z-index: 0;
   }
 
   .nav-title {
-    padding: 26px;
+    padding: 26px 36px;
 
     display: flex;
     align-items: center;
@@ -123,7 +123,7 @@ nav {
         opacity: 1;
         left: 0;
         transform: rotate(0deg);
-        transition: 0.25s ease-in-out;
+        transition: 0.3s ease-in-out;
       }
 
       div > span:nth-child(1) {

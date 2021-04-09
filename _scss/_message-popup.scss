@@ -1,9 +1,9 @@
 #popup-bg {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  left: 0;
-  top: 0;
+  width: 101%;
+  height: 101%;
+  position: fixed;
+  left: -1px;
+  top: -1px;
   //background-color: #4FCB80;
   visibility: hidden;
   z-index: 2;
@@ -169,10 +169,11 @@
 }
 
 //--------------------------
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
   #popup-bg.showbg {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    background-color: #00000096;
   }
 
   .popup-open {
@@ -227,7 +228,7 @@
     }
 
     #email, #bodytext {
-      padding: 4vh;
+      padding: 3vw;
       margin-top: 0;
     }
 
