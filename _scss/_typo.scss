@@ -1,14 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
 
-html {
-  p {
-    font-family: "Libre Baskerville", serif;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 31px;
-  }
-}
-
 @mixin heading-hero {
   font-family: "SofiaPro", sans-serif;
   font-weight: bold;
@@ -16,6 +7,15 @@ html {
   line-height: 116%;
   letter-spacing: -.03em;
   font-feature-settings: "salt" on;
+
+  @media screen and (max-width: 850px) {
+    font-size: clamp(25px, 8vw, 42px);
+  }
+  @media screen and (max-width: 450px) {
+    font-size: clamp(25px, 8vw, 38px);
+    line-height: 124%;
+  }
+
 }
 
 @mixin heading-h2 {
@@ -23,15 +23,32 @@ html {
   font-weight: bold;
   font-size: 72px;
   line-height: 126.4%;
+  letter-spacing: -.03em;
   font-feature-settings: "salt" on;
+
+  @media screen and (max-width: 450px) {
+    font-size: calc(min(8vw, 36px));
+    line-height: 124%;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: calc(min(8vw, 36px));
+    line-height: 124%;
+  }
 }
 
 @mixin heading-h3 {
   font-family: "SofiaPro", sans-serif;
   font-weight: bold;
   font-size: 28px;
+  letter-spacing: -.03em;
   line-height: 39px;
   font-feature-settings: "salt" on;
+
+  @media screen and (max-width: 450px) {
+    font-size: 6vw;
+    line-height: 8vw;
+  }
 }
 
 @mixin heading-h4 {
@@ -40,6 +57,7 @@ html {
   font-size: 20px;
   line-height: 28px;
   font-feature-settings: 'pnum' on, 'lnum' on, "salt" on;
+  letter-spacing: .03em;
   text-transform: uppercase;
 }
 
@@ -48,8 +66,17 @@ html {
   font-weight: 600;
   font-size: 52px;
   line-height: 124.4%;
+  letter-spacing: -.03em;
   font-feature-settings: "salt" on;
 
+  @media screen and (max-width: 850px) {
+    font-size: clamp(25px, 8vw, 42px);
+    line-height: 120%;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: calc(min(8vw, 36px));
+    line-height: 120%;
+  }
 }
 
 @mixin text-standard-sofia {
@@ -58,6 +85,11 @@ html {
   font-size: 18px;
   line-height: 24px;
   font-feature-settings: "salt" on;
+
+  @media screen and (max-width: 450px) {
+    font-size: calc(min(5vw, 18px));
+    line-height: 135%;
+  }
 }
 
 @mixin text-large-sofia {
@@ -66,13 +98,33 @@ html {
   font-size: 24px;
   line-height: 132.3%;
   font-feature-settings: "salt" on;
+
+  @media screen and (max-width: 850px) {
+    font-size: clamp(18px, 5vw, 20px);
+    line-height: 132.3%;
+  }
+  @media screen and (max-width: 450px) {
+    font-size: 20px;
+    line-height: 132.3%;
+  }
 }
 
 @mixin text-standard-bask {
-  font-family: "Libre Baskerville",serif;
+  font-family: "Libre Baskerville", serif;
   font-weight: 400;
   font-size: 20px;
   line-height: 31px;
+
+  @media screen and (max-width: 450px) {
+    font-size: clamp(16px, 4vw, 18px);
+    line-height: 1.6em;
+  }
+}
+
+html {
+  p {
+    @include text-standard-bask;
+  }
 }
 
 a {
@@ -93,7 +145,7 @@ h1 {
 }
 
 h2 {
-   @include heading-h2
+  @include heading-h2
 }
 
 h3 {
@@ -107,3 +159,4 @@ h4 {
 .text-xlarge-sofia {
   @include text-xlarge-sofia;
 }
+

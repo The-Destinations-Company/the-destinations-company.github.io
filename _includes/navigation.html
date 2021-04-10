@@ -5,35 +5,54 @@
 <!--{{ class }}-->
 <!--{{ endif }}-->
 
+{% capture pageUrl %}{{page.url}}{% endcapture %}
 
+{%  assign pageUrl = pageUrl  | split: "." %}
+{% assign pageUrl2 = pageUrl[0] | strip %}
 
-<nav class="nav text-standard-sofia">
-    {% for item in site.data.navigation %}
-    <div class="nav-link">
-        <a class="" href="{{ item.link }}"{% if page.url== item.link %}class="current" {% endif %}>{{ item.name }}</a>
+<nav id="nav" class="nav text-standard-sofia">
 
-        {% if item.name == "Journal" %}
-
-        {% assign post_date = site.posts.first.date %}
-        {% assign current_time = site.time %}
-
-        {%   assign today = site.time | date: '%s'      %}
-        {%   assign start = post_date | date: '%s' %}
-        {%   assign secondsSince = today | minus: start     %}
-        {%   assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60     %}
-        {%   assign daysSince = hoursSince | divided_by: 24  %}
-
-        {% if daysSince <= 14 %}
-
-
-        <a class="notification-new-post" href="/index.html"></a>
-
-        {% endif %}
-        {% endif %}
-
+    <div class="nav-title">
+    {% for item in site.data.navigation limit: 1 %}
+        <a class="" href="{{ item.link }}">{{ item.name }}</a>
+    {% endfor %}
+        <div id="hamburger" class="">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </div>
 
+    <div class="nav-items">
+        {% for item in site.data.navigation offset: 1%}
+        {% assign itemLink = item.link | strip %}
 
+        <div class="nav-link">
+            <a class="" href="{{ item.link }}" {% if pageUrl2== itemLink %}class="current" {% endif %}>{{ item.name
+                }}</a>
 
+            {% if item.name == "Journal" %}
+
+            {% assign post_date = site.posts.first.date %}
+            {% assign current_time = site.time %}
+
+            {% assign today = site.time | date: '%s' %}
+            {% assign start = post_date | date: '%s' %}
+            {% assign secondsSince = today | minus: start %}
+            {% assign hoursSince = secondsSince | divided_by: 60 | divided_by: 60 %}
+            {% assign daysSince = hoursSince | divided_by: 24 %}
+
+            {% if daysSince <= 14 %}
+
+            <a class="notification-new-post" href="/backup_index.html"></a>
+
+            {% endif %}
+            {% endif %}
+        </div>
     {% endfor %}
+    </div>
+
 </nav>

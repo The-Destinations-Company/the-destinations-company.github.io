@@ -1,23 +1,44 @@
 nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
   display: flex;
-  //background-color: $yellow-70;
+  align-items: center;
+  background-color: inherit;
 
   @include text-standard-sofia;
 
-  .nav-link:first-child {
+  .nav-title {
+    display: flex;
     font-weight: 700;
     margin-right: auto;
+    background-color: inherit;
+    z-index: 1;
   }
 
-  :not(:last-child, :first-child) {
-    margin-right: 90px - 30px*2;
+  .nav-link:not(:last-child) {
+    margin-right: 45px;
   }
 
-  .nav-link {
-    padding: 26px;
+  .nav-items {
+    margin-left: auto;
+    display: flex;
+    background-color: inherit;
+    padding: 26px 36px;
+
+    z-index: 0;
+  }
+
+  .nav-title {
+    padding: 26px 36px;
 
     display: flex;
     align-items: center;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: baseline;
   }
 
   .notification-new-post {
@@ -26,5 +47,137 @@ nav {
     border-radius: 50%;
     background-color: $green-70;
     margin-left: 10px;
+  }
+
+  #hamburger {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+
+    .nav-title {
+      width: 100%;
+      margin-right: 0;
+      box-sizing: border-box;
+
+      a {
+        padding: 8vw;
+      }
+    }
+
+    .nav-items {
+      margin-left: 0;
+      flex-direction: column;
+      position: absolute;
+      top: -100%;
+      transition: all .3s cubic-bezier(0.42, 0, 0.12, 0.98);
+      background-color: inherit;
+      width: 100%;
+      padding: 0;
+      border-bottom: $border;
+      visibility: hidden;
+    }
+
+    .nav-link, .nav-title {
+      padding: 0;
+    }
+
+    .nav-link {
+      padding: 12px 8vw;
+    }
+
+    .nav-link:last-child {
+      padding-bottom: 8vw;
+    }
+
+    #hamburger {
+      width: 20px;
+      height: 14px;
+      display: block;
+      margin: 4vw 4vw 4vw auto;
+      padding: 4vw;
+      cursor: pointer;
+      background-color: unset;
+      position: relative;
+
+      div {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+
+      div > span {
+        display: block;
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background: black;
+        border-radius: 2px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.3s ease-in-out;
+      }
+
+      div > span:nth-child(1) {
+        top: 0;
+      }
+
+      div > span:nth-child(2) {
+        top: 7px;
+      }
+
+      div > span:nth-child(3) {
+        top: 7px;
+      }
+
+      div > span:nth-child(4) {
+        top: 14px;
+      }
+    }
+
+    #hamburger:hover {
+    }
+
+    #hamburger.open {
+      & > div {
+        span:nth-child(1) {
+          top: 7px;
+          width: 0%;
+          left: 50%;
+        }
+
+        span:nth-child(2) {
+          transform: rotate(45deg);
+        }
+
+        span:nth-child(3) {
+          transform: rotate(-45deg);
+        }
+
+        span:nth-child(4) {
+          top: 7px;
+          width: 0%;
+          left: 50%;
+        }
+      }
+    }
+  }
+
+  #nav.open {
+    .nav-items {
+      margin-left: 0;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      visibility: initial;
+    }
   }
 }

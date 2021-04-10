@@ -1,0 +1,44 @@
+.concept-intro {
+
+  padding: 120px 45% 36px 36px;
+
+  .title-group p {
+    @include text-xlarge-sofia;
+    margin: 16px 0 60px 0;
+  }
+
+  p:not(:first-of-type) {
+    margin: 14px 0 0 0;
+  }
+}
+
+.focus-feature {
+
+  h3 {
+    margin-top: 0;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.concept-features {
+  grid-auto-rows: 1fr;
+
+}
+
+@media screen and (max-width: 450px) {
+  .concept-intro {
+    padding: 60px 8vw 8vw 8vw;
+
+    .title-group p {
+      @include text-xlarge-sofia;
+      margin: 16px 0 60px 0;
+    }
+  }
+
+  .concept-features {
+    grid-auto-rows: unset;
+  }
+}

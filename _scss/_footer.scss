@@ -25,3 +25,10 @@ footer {
   }
 }
 
+@media screen and (max-width: 450px) {
+  footer {
+    & > :nth-child(n+2) {
+      border-top: $border;
+    }
+  }
+}
