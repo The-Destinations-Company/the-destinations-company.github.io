@@ -1,0 +1,43 @@
+---
+title: Studio
+layout: default
+---
+
+<header class="header-standard header">
+  {% include navigation.html %}
+
+  <h2 class="">{{ page.title }}</h2>
+</header>
+
+
+<section class="section-white concept-intro">
+  <div id="" class="">
+    <div class="title-group">
+      <p class="text-xlarge-sofia">Who we are</p>
+    </div>
+    <p class="">Studio introduction placeholder. Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. But I can't give you this case, it don't belong to me. Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.
+    </p>
+  </div>
+</section>
+
+<section class="grid-normalize-row-height section-white grid-2 grid-2-divider">
+  {% for member in site.data.team-members %}
+  <div class="content-box-standard">
+    {% include random-shapes.html%}
+    <h3 class="heading-h3">{{member.name}}</h3>
+    <p class="">{{member.profile-text}}</p>
+  </div>
+
+  {% if forloop.last %}
+
+  {% assign evenOdd = forloop.index | modulo: 2 %}
+  {% if evenOdd != 0 %}
+  <div class="content-box-standard"></div>
+
+  {% endif %}
+  {% endif %}
+
+  {% endfor %}
+
+
+</section>
