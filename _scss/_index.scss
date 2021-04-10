@@ -21,23 +21,16 @@
   }
 }
 
-.focus p{
-  p {
-    margin-bottom: 0;
-  }
-}
-
 .vision {
   padding: 95px 36px 90px 36px;
   background-color: $yellow-30;
   border-top: $border;
 
-  h4 {
+  .heading-h4 {
     margin: 14px 0;
   }
 
-  p {
-    @include text-xlarge-sofia;
+  .text-xlarge-sofia {
     margin: 0 0 50px 0;
     //  TODO: margin justieren
   }
@@ -133,11 +126,9 @@
   pointer-events: none;
   transition: background-color .2s;
 
-
   &:hover {
     background-color: $yellow-70;
   }
-
 
   a {
     pointer-events: auto;

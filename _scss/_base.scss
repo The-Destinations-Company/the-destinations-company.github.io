@@ -16,12 +16,13 @@ $border: 1px $grey-100 solid;
   justify-content: flex-end;
 
 
-  h2 {
+  h1 {
     margin: 0 0 36px 36px;
     width: 66%;
+    line-height: 126.4%;
   }
 
-  h4 {
+  .heading-h4 {
     margin: 0 0 16px 40px;
   }
 }
@@ -140,6 +141,21 @@ button {
 
   & > :nth-child(1n+3) {
     border-top: $border;
+  }
+}
+
+.content-box-small {
+
+  img {
+    margin-bottom: 8px;
+  }
+
+  p:first-of-type, .heading-h4 {
+    margin-top: 0;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
   }
 }
 

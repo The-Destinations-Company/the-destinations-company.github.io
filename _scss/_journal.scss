@@ -10,16 +10,15 @@
     padding: 20px 36px 20px;
   }
 
-  h4 {
+  .heading-h4 {
     margin: 0 0 2px 0;
   }
 
-  h3 {
+  h2 {
     margin: 0;
   }
 
   p {
-    @include text-standard-sofia;
     margin: 10px 0 0 0;
   }
 

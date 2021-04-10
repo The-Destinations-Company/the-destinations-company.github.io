@@ -1,19 +1,21 @@
 <footer class="section-white grid-3">
 
     <div>
-        <h4>Destinations</h4>
+        <h1 class="heading-h4">Destinations</h1>
         <p>Software for signage planning and simulation</p>
 
         <div class="sitemap">
-            {% for link in site.html_pages %}
+            {% for link in site.pages %}
+{% unless link.name == "404.html" or link.name == "main.scss" or link.name == "/feed.xml" %}
             <p><a href="{{ link.path }}">{{ link.title }}</a></p>
+            {%endunless%}
             {% endfor %}
         </div>
         <p>Say hi hello@destinations.com</p>
         <p>© 2020 Destinations — <a href="/imprint.html">Legal</a></p>
     </div>
     <div>
-        <h4>Bachelor Thesis</h4>
+        <h1 class="heading-h4">Bachelor Thesis</h1>
         <p>B.A. Interaction Design (Spring 2020)
             University of Applied Sciences
             Schwäbisch Gmünd</p>
@@ -21,7 +23,7 @@
         <p>supervised by<br> Prof. Marc Guntow and Prof. Daniel Utz</p>
     </div>
     <div>
-        <h4>GoHfG Team</h4>
+        <h1 class="heading-h4">GoHfG Team</h1>
 <p>Short explainations of gohfg.</p>
         <p><a href="http://www.kaimagnus.de">Kai Magnus Müller</a>, <a href="http://www.martinwehl.de"> Martin Wehl</a> and <a href="http://www.JohannaWellnitz.de"> Johanna Wellnitz</a></p>
     </div>

@@ -143,11 +143,11 @@ h2 {
   @include heading-h2
 }
 
-h3 {
+h3, .heading-h3 {
   @include heading-h3
 }
 
-h4 {
+h4, .heading-h4 {
   @include heading-h4
 }
 
@@ -155,3 +155,6 @@ h4 {
   @include text-xlarge-sofia;
 }
 
+.text-standard-sofia {
+  @include text-standard-sofia;
+}

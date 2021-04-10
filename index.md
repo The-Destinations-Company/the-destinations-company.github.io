@@ -14,27 +14,27 @@ layout: default
 </header>
 
 <section class="focus grid-3 grid-3-divider section-yellow">
-    <div class="">
+    <div class="content-box-small">
         <img height="100" width="100" src="assets/img/shapes/shape-1.svg" alt=""/>
-        <h4 class="">Focus 1</h4>
+        <h2 class="heading-h4">Focus 1</h2>
         <p class="">Aid designers in analyzing project sites</p>
     </div>
-    <div class="">
+    <div class="content-box-small">
         <img height="100" width="100" src="assets/img/shapes/shape-2.svg" alt=""/>
-        <h4 class="">Focus 2</h4>
+        <h2 class="heading-h4">Focus 2</h2>
         <p class="">Eliminate repetitive tasks – simplify management of signage databases?</p>
     </div>
-    <div class="">
+    <div class="content-box-small">
         <img height="100" width="100" src="assets/img/shapes/shape-3.svg" alt=""/>
-        <h4 class="">Focus 3</h4>
+        <h2 class="heading-h4">Focus 3</h2>
         <p class="">Use simulation to preview sign concepts before production?</p>
     </div>
 </section>
 
 <section class="vision">
     <div class="">
-        <h4 class="">Vision</h4>
-        <p class="">Based on the three main areas of focus, we created a vision for the Destinations application.</p>
+        <h2 class="heading-h4">Vision</h2>
+        <p class="text-xlarge-sofia">Based on the three main areas of focus, we created a vision for the Destinations application.</p>
         <a class="button button-yellow" href="/concept"><span>Learn about the concept</span></a>
     </div>
 </section>
@@ -50,37 +50,38 @@ layout: default
     </div>
 </section>
 <section class="insert-section section-white">
-    <p class="text-xlarge-sofia">Our core features</p>
-    <a class="button button-black"><span>Get an overview</span></a>
+    <h1 class="text-xlarge-sofia">Our core features</h1>
+    <a class="button button-black" href="features.html"><span>Get an overview</span></a>
 </section>
 
 <section class="feature-grid section-white grid-2 grid-2-divider">
-    <div class="feature-grid-item">
+    <div class="feature-grid-item content-box-small">
         {% include random-shapes.html%}
-        <h4><a href="/features.html#Route">Route Creation</a></h4>
+        <h2 class="heading-h4"><a href="/features.html#Route">Route Creation</a></h2>
         <p>Keep track of your visitors routes.</p>
     </div>
-    <div class="feature-grid-item">
+    <div class="feature-grid-item content-box-small">
         {% include random-shapes.html%}
-        <h4><a href="/features.html#Database">Signage Database</a></h4>
+        <p class="heading-h4"><a href="/features.html#Database">Signage Database</a></p>
         <p>It keeps track of everythig so you don’t have to.</p>
     </div>
-    <div class="feature-grid-item">
+    <div class="feature-grid-item content-box-small">
         {% include random-shapes.html%}
-        <h4><a href="/features.html#Placement">Signage placement</a></h4>
+        <h2 class="heading-h4"><a href="/features.html#Placement">Signage placement</a></h2>
         <p>Sign placement and exploration made easy.</p>
     </div>
-    <div class="feature-grid-item">
+    <div class="feature-grid-item content-box-small">
         {% include random-shapes.html%}
-        <h4><a href="/features.html#Simulation">Simulation</a></h4>
+        <h2 class="heading-h4"><a href="/features.html#Simulation">Simulation</a></h2>
         <p>It keeps track of everythig so you don’t have to.</p>
     </div>
 </section>
 
 <section class="insert-section section-green">
     <div>
-        <h4>Next Up</h4>
+        <h2 class="heading-h4">Next Up</h2>
         <p>This project has been chosen to be part of the goHfG founders initiative. </p>
     </div>
-    <a class="button button-black"><span>Read the journal entry</span></a>
+    <a class="button button-black" href="{% post_url 2020-10-11-gohfg %}
+"><span>Read the journal entry</span></a>
 </section>
