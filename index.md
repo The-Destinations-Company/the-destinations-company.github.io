@@ -15,17 +15,17 @@ layout: default
 
 <section class="focus grid-3 grid-3-divider section-yellow">
     <div class="">
-        <img src="assets/img/shapes/shape-1.svg" alt=""/>
+        <img height="100" width="100" src="assets/img/shapes/shape-1.svg" alt=""/>
         <h4 class="">Focus 1</h4>
         <p class="">Aid designers in analyzing project sites</p>
     </div>
     <div class="">
-        <img src="assets/img/shapes/shape-2.svg" alt=""/>
+        <img height="100" width="100" src="assets/img/shapes/shape-2.svg" alt=""/>
         <h4 class="">Focus 2</h4>
         <p class="">Eliminate repetitive tasks – simplify management of signage databases?</p>
     </div>
     <div class="">
-        <img src="assets/img/shapes/shape-3.svg" alt=""/>
+        <img height="100" width="100" src="assets/img/shapes/shape-3.svg" alt=""/>
         <h4 class="">Focus 3</h4>
         <p class="">Use simulation to preview sign concepts before production?</p>
     </div>
@@ -39,14 +39,14 @@ layout: default
     </div>
 </section>
 <section class="features-collage section-yellow">
-    <img src="assets/img/2907%20Flow%2016.png" alt="Route Creation and sign placement">
-    <img src="assets/img/2907%20Flow%2006.png" alt="Route Creation and sign placement">
-    <img src="assets/img/new_sign.png" alt="">
+    <img loading="lazy" src="assets/img/2907%20Flow%2016.png" alt="Route Creation and sign placement">
+    <img loading="lazy" src="assets/img/2907%20Flow%2006.png" alt="Route Creation and sign placement">
+    <img loading="lazy" src="assets/img/new_sign.png" alt="">
     <div>
-        <img src="assets/img/database.png" alt="">
+        <img loading="lazy" src="assets/img/database.png" alt="">
     </div>
     <div>
-        <img src="assets/img/route.png" alt="">
+        <img loading="lazy" src="assets/img/route.png" alt="">
     </div>
 </section>
 <section class="insert-section section-white">

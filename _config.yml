@@ -41,7 +41,12 @@ plugins:
 # Excluded items can be processed by explicitly listing the directories or
 # their entries' file path in the `include:` list.
 #
-# exclude:
+exclude:
+   - README.md
+   - Icon
+   - Icon?
+   - Icon^M
+   - backup_index.html
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/

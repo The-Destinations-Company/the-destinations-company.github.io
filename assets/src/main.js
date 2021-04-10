@@ -229,8 +229,8 @@ function privacyCheck(e) {
 }
 
 //TODO: disable to permanently show popup
-// const popupObserver = new IntersectionObserver(closeChat, {threshold: 0.5});
-// popupObserver.observe(document.getElementById("popup"))
+const popupObserver = new IntersectionObserver(closeChat, {threshold: 0.5});
+popupObserver.observe(document.getElementById("popup"))
 
 function handleScroll(entry) {
     console.log("test")
@@ -275,3 +275,8 @@ hamburger.addEventListener('click', function () {
         nav.classList.add('open');
     }
 });
+
+
+function submitForm() {
+
+}
