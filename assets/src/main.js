@@ -228,9 +228,28 @@ function privacyCheck(e) {
     document.getElementById("submit").disabled = !e.checked;
 }
 
-//TODO: disable to permanently show popup
-const popupObserver = new IntersectionObserver(closeChat, {threshold: 0.5});
-popupObserver.observe(document.getElementById("popup"))
+
+
+// let mql = window.matchMedia('(max-width: 850px)');
+// //TODO: disable to permanently show popup
+// if (!mql.matches){
+    const popupObserver = new IntersectionObserver(handleObserver, {threshold: 0.5});
+    popupObserver.observe(document.getElementById("popup"))
+// }
+
+function handleObserver() {
+    if (window.innerWidth > 850) {
+        closeChat()
+    }
+}
+
+// window.addEventListener('resize', (e) => {
+//     console.log(e)
+//     if (e.currentTarget.innerWidth > 850) {
+//         console.log("resize")
+//         popupObserver.disable()
+//     }
+// });
 
 function handleScroll(entry) {
     console.log("test")
