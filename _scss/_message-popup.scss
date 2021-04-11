@@ -113,8 +113,8 @@
     border-radius: 0;
     padding: 0;
     margin: 0;
-    appearance: none;
     -webkit-appearance: none;
+    appearance: none;
     border: $border;
     position: relative;
   }
@@ -171,8 +171,8 @@
 //--------------------------
 @media screen and (max-width: 850px) {
   #popup-bg.showbg {
-    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     background-color: #00000096;
   }
 

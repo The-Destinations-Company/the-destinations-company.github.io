@@ -47,6 +47,7 @@ exclude:
    - Icon?
    - Icon^M
    - backup_index.html
+   - package-lock.json
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
