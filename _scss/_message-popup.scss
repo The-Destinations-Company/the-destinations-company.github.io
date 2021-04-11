@@ -187,8 +187,8 @@
     position: fixed;
     left: unset;
     top: unset;
-    bottom: -100%;
-    transform: translate(0, 0) scale(1);
+    bottom: 0;
+    transform: translate(0, 100%) scale(1);
 
     width: 100vw;
     max-width: 850px;

@@ -139,7 +139,7 @@ h1 {
   @include heading-hero
 }
 
-h2 {
+h2,.heading-h2 {
   @include heading-h2
 }
 
