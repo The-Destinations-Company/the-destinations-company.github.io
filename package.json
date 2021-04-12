@@ -1,0 +1,25 @@
+{
+  "name": "destinations-website",
+  "version": "1.0.0",
+  "description": "install: \r gem install bundler jekyll",
+  "main": "index.js",
+  "dependencies": {
+    "glob": "^7.1.6",
+    "sharp": "^0.28.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "optimg": "node optimize-images.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Destinations-Company/the-destinations-company.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/The-Destinations-Company/the-destinations-company.github.io/issues"
+  },
+  "homepage": "https://github.com/The-Destinations-Company/the-destinations-company.github.io#readme"
+}

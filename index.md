@@ -39,15 +39,21 @@ layout: default
     </div>
 </section>
 <section class="features-collage section-yellow">
-    <img loading="lazy" src="assets/img/2907%20Flow%2016.png" alt="Route Creation and sign placement">
-    <img loading="lazy" src="assets/img/2907%20Flow%2006.png" alt="Route Creation and sign placement">
-    <img loading="lazy" src="assets/img/new_sign.png" alt="">
+    <img loading="lazy" 
+src="./assets/img/2907Flow16.png" srcset="assets/img/resized/2907Flow16-2160.png 2160w, assets/img/resized/2907Flow16-1440.png 1440w, assets/img/resized/2907Flow16-720.png 720w" 
+alt="Route Creation and sign placement">
+
+    <img loading="lazy" 
+src="./assets/img/2907Flow06.png" srcset="assets/img/resized/2907Flow06-2160.png 2160w, assets/img/resized/2907Flow06-1440.png 1440w, assets/img/resized/2907Flow06-720.png 720w"
+alt="Route Creation and sign placement">
+<img loading="lazy" src="./assets/img/new_sign.png" srcset="assets/img/resized/new_sign-516.png 516w, assets/img/resized/new_sign-344.png 344w, assets/img/resized/new_sign-172.png 172w" alt="Route Creation and sign placement">
+
     <div>
-        <img loading="lazy" src="assets/img/database.png" alt="">
+<img loading="lazy" src="./assets/img/database.png" srcset="assets/img/resized/database-411.png 411w, assets/img/resized/database-274.png 274w, assets/img/resized/database-137.png 137w" alt="">
     </div>
     <div>
-        <img loading="lazy" src="assets/img/route.png" alt="">
-    </div>
+<img loading="lazy" src="./assets/img/route.png" srcset="assets/img/resized/route-411.png 411w, assets/img/resized/route-274.png 274w, assets/img/resized/route-137.png 137w" alt="">
+</div>
 </section>
 <section class="insert-section section-white">
     <h1 class="text-xlarge-sofia">Our core features</h1>
