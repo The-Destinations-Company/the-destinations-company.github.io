@@ -8,9 +8,9 @@
             </button>
         </header>
         <div class="form">
-            <form action="">
-                <input id="email" type="email" placeholder="email, if you wish to hear from us">
-                <textarea id="bodytext" rows="4" cols="fixed" placeholder="message"></textarea>
+            <form action="" id="message-form">
+                <input id="email" type="email" name="email" placeholder="email, if you wish to hear from us">
+                <textarea id="bodytext" rows="4" cols="fixed" name="bodytext" placeholder="message"></textarea>
 
                 <div class="privacy-send">
                     <input id="privacy-check" type="checkbox" autocomplete="off" onclick="privacyCheck(this)">
@@ -19,7 +19,8 @@
                         unrelated to your inquiry. </p>
                     <label for="privacy-check" class="privacy-text">I have read the <a href="/privacy.html">privacy
                         policy</a></label>
-                    <input id="submit" class="button-s button-black" type="submit" onclick="submitForm();" disabled>
+                    <button type="button" id="submit" class="button-s button-black" onclick="submitForm();" disabled>Submit</button>
+                    <p id="response-field"></p>
                 </div>
             </form>
         </div>

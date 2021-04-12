@@ -234,8 +234,13 @@ function privacyCheck(e) {
 // //TODO: disable to permanently show popup
 // if (!mql.matches){
     const popupObserver = new IntersectionObserver(handleObserver, {threshold: 0.5});
+
+const popup = document.getElementById("popup")
+
+if (popup){
+console.log(popup)
     popupObserver.observe(document.getElementById("popup"))
-// }
+}
 
 function handleObserver() {
     if (window.innerWidth > 850) {
@@ -297,5 +302,16 @@ hamburger.addEventListener('click', function () {
 
 
 function submitForm() {
-
+    data = $('#message-form').serialize();
+    console.log(data)
+    $.ajax({
+        url: "php/message-send.php",
+        type: 'POST',
+        data: data,
+        async: false,
+        dataType: 'html',
+        success: function (msg) {
+            $('#response-field').html(msg);
+        }
+    });
 }
