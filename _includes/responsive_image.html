@@ -1,0 +1,17 @@
+{% assign file = include.file %}
+
+{% assign image_files = site.static_files | where: "image", true %}
+{% for myimage in image_files %}
+
+{% if myimage.name == file %}
+{{ myimage.path }}
+{{ myimage.basename }}
+
+{% endif %}
+{% endfor %}
+
+<picture>
+    <source media="(min-width: 2880px)" srcset="/assets/img/resized/{{ myimage.basename }}-2880.png">
+    <source media="(min-width: 2160px)" srcset="/assets/img/resized/{{ myimage.basename }}-2880.png">
+    <img loading="lazy" src="/{{ path }}">
+</picture>

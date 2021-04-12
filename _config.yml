@@ -48,6 +48,8 @@ exclude:
    - Icon^M
    - backup_index.html
    - package-lock.json
+   - package.json
+   - optimize-images.js
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
@@ -61,3 +63,10 @@ exclude:
 
 sass:
   sass_dir: _scss
+
+
+defaults:
+  - scope:
+      path: "assets/img/source/*"
+    values:
+      image: true
