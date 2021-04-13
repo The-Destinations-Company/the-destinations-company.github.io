@@ -1,6 +1,13 @@
 <div class="popup-wrapper">
+    <div id="popup-success-notification" class="popup-success-notification">
+        <div class="checkmark">
+            <span></span>
+            <span></span>
+        </div>
+        <p>Message sent! Thank you for your feedback</p>
+    </div>
     <div id="popup-bg"></div>
-    <div id="popup" class="message-popup show">
+    <div id="popup" class="message-popup">
         <header>
             <h3>Please leave a message, beeep…</h3>
             <button class="button-close" onclick="closeChat()" autofocus>
@@ -10,7 +17,8 @@
 
         <div class="form">
             <div class="response-wrapper" id="response-wrapper">
-                <div id="response-field"><p>Something went wrong, we are working on a fix, feel free to send us an email instead.</p></div>
+                <div id="response-field"><p>Oops, something went wrong but we are working on a fix. Feel free to send us
+                    an email instead.</p></div>
                 <button class="button-close" onclick="closeErrorMessage()" autofocus>
                     <img src="/assets/src/button-close.svg" alt="X">
                 </button>

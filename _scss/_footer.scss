@@ -18,10 +18,14 @@ footer {
 
   .sitemap {
     margin: 20px 0;
+
+    p {
+      margin: 0;
+    }
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   footer {
     & > :nth-child(n+2) {
       border-top: $border;

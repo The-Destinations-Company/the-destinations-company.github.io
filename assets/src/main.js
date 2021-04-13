@@ -211,7 +211,6 @@ function toggleChat() {
     document.getElementById("popup").classList.toggle("show")
     document.getElementsByTagName("body")[0].classList.toggle("popup-open")
     document.getElementById("popup-bg").classList.toggle("showbg")
-
 }
 
 function closeChat() {
@@ -220,7 +219,7 @@ function closeChat() {
     document.getElementById("privacy-check").checked = false
     document.getElementsByTagName("body")[0].classList.remove("popup-open")
     document.getElementById("popup-bg").classList.remove("showbg")
-
+    document.getElementById("response-wrapper").classList.remove("response")
 }
 
 function privacyCheck(e) {
@@ -228,11 +227,11 @@ function privacyCheck(e) {
     document.getElementById("submit").disabled = !e.checked;
 }
 
-
-// let mql = window.matchMedia('(max-width: 850px)');
-// //TODO: disable to permanently show popup
-// if (!mql.matches){
-//     const popupObserver = new IntersectionObserver(handleObserver, {threshold: 0.5});
+let popupObserver
+let mql = window.matchMedia('(max-width: 850px)');
+//TODO: disable to permanently show popup
+if (!mql.matches) {
+    popupObserver = new IntersectionObserver(handleObserver, {threshold: 0.5});
 
 const popup = document.getElementById("popup")
 
@@ -245,6 +244,7 @@ function handleObserver() {
     if (window.innerWidth > 850) {
         closeChat()
     }
+}
 }
 
 // window.addEventListener('resize', (e) => {
@@ -336,6 +336,11 @@ function sendSuccess(msg) {
     document.getElementById("submit").classList.toggle("spinner-fade-out")
     document.getElementById("submit").classList.toggle("send-success")
     // $('#response-field').html(msg)
+    closeChat()
+    window.setTimeout(() => {
+        showSuccessNotification()
+    }, 800)
+
 }
 
 function sendFail(msg) {
@@ -365,4 +370,11 @@ function removeSpinner(fail) {
 
 function closeErrorMessage() {
     document.getElementById("response-wrapper").classList.remove("response")
+}
+
+function showSuccessNotification() {
+    document.getElementById("popup-success-notification").classList.toggle("popup-success-notification-show")
+    window.setTimeout(() => {
+        document.getElementById("popup-success-notification").classList.toggle("popup-success-notification-show")
+    }, 2500)
 }

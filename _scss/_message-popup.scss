@@ -15,8 +15,8 @@
 }
 
 .message-popup {
-  overflow: hidden;
   opacity: 0;
+  overflow: scroll;
   visibility: hidden;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
@@ -33,6 +33,7 @@
   max-width: 850px;
   border: $border;
   box-shadow: 0 17px 60px rgba(0, 0, 0, 0.13);
+  background-color: white;
 
   header {
     display: flex;
@@ -40,12 +41,19 @@
     justify-content: space-between;
     background-color: $yellow-70;
     border-bottom: $border;
+    position: relative;
+    z-index: 1;
   }
 
   h3 {
     width: auto;
     margin: 1em 36px;
   }
+
+  form {
+    padding: 36px;
+  }
+}
 
 .button-close {
   display: flex;
@@ -61,7 +69,6 @@
 
   }
 }
-}
 
 .show {
   transform: translate(-50%, -50%) scale(1);
@@ -70,10 +77,8 @@
 }
 
 .form {
-  padding: 36px;
-  background-color: white;
   position: relative;
-  overflow: hidden;
+
   #email {
     margin-bottom: 36px;
   }
@@ -273,24 +278,25 @@
 .response-wrapper {
   transition: 0.3s ease-in-out;
   display: flex;
-  //padding: 0 36px;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   transform: translateY(-100%);
-  background-color: #470000;
+  background-color: $yellow-40;
   border-bottom: $border;
   width: -webkit-fill-available;
+
   p {
     margin: 0;
   }
+}
 
-  #response-field {
-    max-width: 400px;
-    margin: auto auto auto 36px;
-  }
+#response-field {
+  max-width: 400px;
+  padding: .8em 36px;
 }
 
 #response-wrapper.response {
@@ -298,7 +304,72 @@
 
 }
 
+.popup-success-notification {
+  height: 30px;
+  padding: 8px 20px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, -160%);
+  visibility: hidden;
+  margin: 0 auto;
+  z-index: 10;
+  background-color: $green-70;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border: $border;
+  box-shadow: 0 14px 55px rgba(0, 0, 0, 0.3);
+
+  transition: .3s cubic-bezier(0.14, 0.61, 0.46, 1);
+
+  .checkmark {
+    width: 20px;
+    height: 20px;
+    transform: rotate(45deg);
+
+    span {
+      height: 2px;
+      background: black;
+      border-radius: 2px;
+      position: absolute;
+    }
+
+    & > span:nth-child(1) {
+        width: 12px;
+      top: 18px;
+      right: 7px;
+    }
+
+    & > span:nth-child(2) {
+      width: 2px;
+      height: 20px;
+      right: 7px;    }
+  }
+
+  p {
+    margin-left: 20px;
+  @include text-standard-sofia;
+  }
+}
+
+
+
+.popup-success-notification-show {
+  transform: translate(-50%, 0%);
+  visibility: visible;
+}
+
 @keyframes submit-load-animation {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+@keyframes success-notification {
   0% {
     transform: translateX(-200%);
   }
@@ -320,7 +391,7 @@
   }
 
   .message-popup {
-    overflow-y: scroll;
+    //overflow-y: scroll;
     z-index: 10;
     opacity: 1;
     position: fixed;
@@ -351,6 +422,10 @@
     .button-close {
       padding: 3vw 5vw;
     }
+
+    form {
+      padding: 5vw;
+    }
   }
 
   .show {
@@ -360,8 +435,7 @@
   }
 
   .form {
-    padding: 5vw;
-
+    overflow: scroll;
     #email {
       margin-bottom: 5vw;
     }
@@ -388,6 +462,9 @@
       background-color: #606060;
     }
   }
+
+  #response-field {
+  }
 }
 
 @media screen and (max-width: 450px) {
@@ -397,19 +474,21 @@
       h3 {
         margin: 1em 8vw;
       }
-
-      .button-close {
-        padding: 8vw;
-      }
     }
 
-    .response-wrapper {
+    .button-close {
+      padding: 8vw;
+    }
+
+    #response-field {
       padding: 1em 8vw;
     }
 
-    .form {
+    form {
       padding: 8vw;
+    }
 
+    .form {
       #email {
         margin-bottom: 8vw;
       }
