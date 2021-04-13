@@ -1,15 +1,24 @@
 <div class="popup-wrapper">
     <div id="popup-bg"></div>
-    <div id="popup" class="message-popup">
+    <div id="popup" class="message-popup show">
         <header>
             <h3>Please leave a message, beeep…</h3>
             <button class="button-close" onclick="closeChat()" autofocus>
                 <img src="/assets/src/button-close.svg" alt="X">
             </button>
         </header>
+
         <div class="form">
+            <div class="response-wrapper" id="response-wrapper">
+                <div id="response-field"><p>Something went wrong, we are working on a fix, feel free to send us an email instead.</p></div>
+                <button class="button-close" onclick="closeErrorMessage()" autofocus>
+                    <img src="/assets/src/button-close.svg" alt="X">
+                </button>
+            </div>
             <form action="" id="message-form">
+                <label for="email" hidden>Leave your email, if you wish to get contacted</label>
                 <input id="email" type="email" name="email" placeholder="email, if you wish to hear from us">
+                <label for="bodytext" hidden>Type your message here</label>
                 <textarea id="bodytext" rows="4" cols="fixed" name="bodytext" placeholder="message"></textarea>
 
                 <div class="privacy-send">
@@ -19,10 +28,17 @@
                         unrelated to your inquiry. </p>
                     <label for="privacy-check" class="privacy-text">I have read the <a href="/privacy.html">privacy
                         policy</a></label>
-                    <button type="button" id="submit" class="button-s button-black" onclick="submitForm();" disabled>Submit</button>
-                    <p id="response-field"></p>
+                    <button type="button" id="submit" class="button-s button-black" onclick="submitForm();">
+                        <div id="submit-background" class="submit-background"></div>
+                        <span class="submit-text">Submit</span>
+                        <div id="loading-spinner" class="submit-loading">
+                            <span></span>
+                        </div>
+                    </button>
                 </div>
             </form>
+
         </div>
     </div>
+
 </div>

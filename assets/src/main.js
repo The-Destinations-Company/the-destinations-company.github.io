@@ -17,7 +17,7 @@ $(function () {
 
     //console.log($(".use-case-figure-group").find(">:first-child"))
 
-    if($(".use-case-container").css("display") !== "none"){
+    if ($(".use-case-container").css("display") !== "none") {
         try {
             const firstFigure = $(".use-case-figure-group").find(">:first-child")
 
@@ -229,16 +229,15 @@ function privacyCheck(e) {
 }
 
 
-
 // let mql = window.matchMedia('(max-width: 850px)');
 // //TODO: disable to permanently show popup
 // if (!mql.matches){
-    const popupObserver = new IntersectionObserver(handleObserver, {threshold: 0.5});
+//     const popupObserver = new IntersectionObserver(handleObserver, {threshold: 0.5});
 
 const popup = document.getElementById("popup")
 
-if (popup){
-console.log(popup)
+if (popup) {
+    console.log(popup)
     popupObserver.observe(document.getElementById("popup"))
 }
 
@@ -300,18 +299,70 @@ hamburger.addEventListener('click', function () {
     }
 });
 
+let message = null;
 
 function submitForm() {
+    handleLoadingSpinner()
+
     data = $('#message-form').serialize();
     console.log(data)
     $.ajax({
         url: "php/message-send.php",
         type: 'POST',
         data: data,
-        async: false,
+        async: true,
         dataType: 'html',
-        success: function (msg) {
-            $('#response-field').html(msg);
+        success: (e) => {
+            window.setTimeout(() => {
+                sendSuccess(e)
+            }, 1500)
+        },
+        error: (e) => {
+            window.setTimeout(() => {
+                sendFail(e)
+            }, 1500)
         }
     });
+}
+
+function handleLoadingSpinner() {
+    document.getElementById("submit").classList.toggle("show-load")
+
+}
+
+function sendSuccess(msg) {
+    console.log("message sent")
+    console.log(msg.statusText)
+    document.getElementById("submit").classList.toggle("spinner-fade-out")
+    document.getElementById("submit").classList.toggle("send-success")
+    // $('#response-field').html(msg)
+}
+
+function sendFail(msg) {
+    console.log("message fail")
+    console.log(msg.statusText)
+    document.getElementById("submit").classList.toggle("spinner-fade-out")
+    document.getElementById("submit").classList.toggle("send-fail")
+    // $('#response-field').html("Something went wrong");
+    document.getElementById("response-wrapper").classList.add("response")
+
+    let fail = true
+    window.setTimeout(() => {
+        removeSpinner(fail)
+    }, 500)
+}
+
+function removeSpinner(fail) {
+    document.getElementById("submit").classList.remove("show-load")
+    document.getElementById("submit").classList.remove("spinner-fade-out")
+    // document.getElementById("response-wrapper").classList.remove("response")
+    if (fail) {
+        document.getElementById("submit").classList.remove("send-fail")
+    } else {
+        document.getElementById("submit").classList.remove("send-success")
+    }
+}
+
+function closeErrorMessage() {
+    document.getElementById("response-wrapper").classList.remove("response")
 }
