@@ -353,8 +353,6 @@
   }
 }
 
-
-
 .popup-success-notification-show {
   transform: translate(-50%, 0%);
   visibility: visible;
@@ -498,5 +496,11 @@
         margin-top: 0;
       }
     }
+  }
+
+  .popup-success-notification {
+    max-width: 70vw;
+    padding: 12px 20px;
+    width: fit-content;
   }
 }
