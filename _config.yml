@@ -50,6 +50,7 @@ exclude:
    - package-lock.json
    - package.json
    - optimize-images.js
+   - .idea/
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
