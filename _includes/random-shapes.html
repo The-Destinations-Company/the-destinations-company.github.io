@@ -1,5 +1,5 @@
 {% assign min = 1 %}
-{% assign max = 4 %}
+{% assign max = 8 %}
 {% assign diff = max | minus: min %}
 {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
 
