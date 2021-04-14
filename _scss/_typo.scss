@@ -6,7 +6,7 @@
   font-size: 72px;
   line-height: 116%;
   font-feature-settings: "salt" on;
-  letter-spacing: -.03em;
+  letter-spacing: -.02em;
 
   @media screen and (max-width: 850px) {
     font-size: clamp(25px, 8vw, 42px);
@@ -23,7 +23,7 @@
   font-weight: bold;
   font-size: 72px;
   line-height: 126.4%;
-  letter-spacing: -.03em;
+  letter-spacing: -.02em;
   font-feature-settings: "salt" on;
 
   @media screen and (max-width: 450px) {
@@ -56,7 +56,7 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
-  letter-spacing: .03em;
+  letter-spacing: .02em;
   font-feature-settings: 'pnum' on, 'lnum' on, "salt" on;
   text-transform: uppercase;
 }
@@ -66,7 +66,7 @@
   font-weight: 600;
   font-size: 52px;
   line-height: 124.4%;
-  letter-spacing: -.03em;
+  letter-spacing: -.02em;
   font-feature-settings: "salt" on;
 
   @media screen and (max-width: 850px) {
