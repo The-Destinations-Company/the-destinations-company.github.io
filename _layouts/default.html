@@ -8,7 +8,7 @@ layout: compress
     <meta charset="UTF-8">
     <title>{{ site.title }}{{ title }}</title>
 
-    <meta name="description" content="{{ page.description }}">
+    <meta name="description" content="{{ site.description }}">
     <meta property="og:type" content="article">
     <meta property="og:title" content="{{ site.title }}{{ page.title }}">
     <meta name="og:description" content="{{ page.description }}">
@@ -32,7 +32,57 @@ layout: compress
     <meta name="msapplication-TileColor" content="2a4cc4">
     <meta name="theme-color" content="2a4cc4">
     <meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
-    <link rel="stylesheet" href="/assets/fonts/destinations-fonts.css">
+    <style>
+        /**
+ * @license
+ * MyFonts Webfont Build ID 4032825, 2021-03-29T09:37:06-0400
+ *
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are
+ * explicitly restricted from using the Licensed Webfonts(s).
+ *
+ * You may obtain a valid license at the URLs below.
+ *
+ * Webfont: SofiaPro-Regular by Mostardesign
+ * URL: https://www.myfonts.com/fonts/mostardesign/sofia-pro/regular/
+ *
+ * Webfont: SofiaPro-SemiBold by Mostardesign
+ * URL: https://www.myfonts.com/fonts/mostardesign/sofia-pro/semi-bold/
+ *
+ * Webfont: SofiaPro-Bold by Mostardesign
+ * URL: https://www.myfonts.com/fonts/mostardesign/sofia-pro/bold/
+ *
+ *
+ * Webfonts copyright: Copyright © Olivier Gourvat - Mostardesign Type Foundry, 2020. All rights reserved.
+ *
+ * © 2021 MyFonts Inc
+*/
+
+
+        /* @import must be at top of file, otherwise CSS will not work */
+        @import url("//hello.myfonts.net/count/3d8939");
+
+        @font-face {
+            font-family: "SofiaPro";
+            font-weight: 700;
+            font-display: swap;
+            src: url('assets/fonts/webFonts/SofiaProBold/font.woff2') format('woff2'), url('assets/fonts/webFonts/SofiaProBold/font.woff') format('woff');
+        }
+        @font-face {
+            font-family: "SofiaPro";
+            font-weight: 600;
+            font-display: swap;
+            src: url('assets/fonts/webFonts/SofiaProSemiBold/font.woff2') format('woff2'), url('assets/fonts/webFonts/SofiaProSemiBold/font.woff') format('woff');
+        }
+        @font-face {
+            font-family: "SofiaPro";
+            font-weight: 400;
+            font-display: swap;
+            src: url('assets/fonts/webFonts/SofiaProRegular/font.woff2') format('woff2'), url('assets/fonts/webFonts/SofiaProRegular/font.woff') format('woff');
+        }
+
+    </style>
+<!--    <link rel="stylesheet" href="/assets/fonts/destinations-fonts.css">-->
     <link rel="stylesheet" href="/assets/css/main.css?v=0.1.0">
 </head>
 <body>
@@ -43,7 +93,7 @@ layout: compress
 
 
 <!--<script src="/assets/src/swup.min.js"></script>-->
-<script src="/assets/src/jquery-3.5.1.slim.min.js"></script>
-<script src="/assets/src/main.js"></script>
+<script src="/assets/src/jquery-3.6.0.min.js"></script>
+<script src="/assets/src/main.js?v=1.0"></script>
 </body>
 </html>

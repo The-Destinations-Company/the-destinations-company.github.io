@@ -1,11 +1,11 @@
 footer {
-  h4 {
+  .heading-h4 {
     margin: 0 0 12px 0;
   }
 
-  p {
+  p, a {
     @include text-standard-sofia;
-    color: #7E7E7E;
+    color: #757575;
     margin: 0 0 20px 0;
   }
 
@@ -13,7 +13,7 @@ footer {
     text-decoration: underline;
   }
 
-  p:first-of-type {
+  a:first-of-type {
   }
 
   .sitemap {
@@ -25,10 +25,17 @@ footer {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 600px) {
   footer {
     & > :nth-child(n+2) {
       border-top: $border;
     }
+
+    a {
+      padding: 8px 0;
+      line-height: 1.6em;
+    }
   }
+
+
 }

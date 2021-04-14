@@ -7,6 +7,7 @@
   line-height: 116%;
   letter-spacing: -.03em;
   font-feature-settings: "salt" on;
+  letter-spacing: -.02em;
 
   @media screen and (max-width: 850px) {
     font-size: clamp(25px, 8vw, 42px);
@@ -23,7 +24,8 @@
   font-weight: bold;
   font-size: 72px;
   line-height: 126.4%;
-  letter-spacing: -.03em;
+
+  letter-spacing: -.02em;
   font-feature-settings: "salt" on;
 
   @media screen and (max-width: 450px) {
@@ -41,7 +43,8 @@
   font-family: "SofiaPro", sans-serif;
   font-weight: bold;
   font-size: 28px;
-  letter-spacing: -.03em;
+  letter-spacing: -.01em;
+
   line-height: 39px;
   font-feature-settings: "salt" on;
 
@@ -56,6 +59,7 @@
   font-weight: 600;
   font-size: 20px;
   line-height: 28px;
+  letter-spacing: .02em;
   font-feature-settings: 'pnum' on, 'lnum' on, "salt" on;
   letter-spacing: .03em;
   text-transform: uppercase;
@@ -66,7 +70,7 @@
   font-weight: 600;
   font-size: 52px;
   line-height: 124.4%;
-  letter-spacing: -.03em;
+  letter-spacing: -.02em;
   font-feature-settings: "salt" on;
 
   @media screen and (max-width: 850px) {
@@ -144,15 +148,15 @@ h1 {
   @include heading-hero
 }
 
-h2 {
+h2,.heading-h2 {
   @include heading-h2
 }
 
-h3 {
+h3, .heading-h3 {
   @include heading-h3
 }
 
-h4 {
+h4, .heading-h4 {
   @include heading-h4
 }
 
@@ -160,3 +164,6 @@ h4 {
   @include text-xlarge-sofia;
 }
 
+.text-standard-sofia {
+  @include text-standard-sofia;
+}

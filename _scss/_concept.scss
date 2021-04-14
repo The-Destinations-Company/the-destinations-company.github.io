@@ -1,18 +1,19 @@
 .concept-intro {
 
-  padding: 120px 45% 36px 36px;
+  padding: 80px 45% 36px 36px;
 
-  .title-group p {
-    @include text-xlarge-sofia;
-    margin: 16px 0 60px 0;
+  .heading-h4 {
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
   }
 
-  p:not(:first-of-type) {
-    margin: 14px 0 0 0;
+  .title-group .section-heading {
+    margin: 16px 0 50px 0;
   }
 }
 
-.focus-feature {
+//TODO: merge and standardize with feature-grid-item
+.content-box-standard {
 
   h3 {
     margin-top: 0;
@@ -23,7 +24,7 @@
   }
 }
 
-.concept-features {
+.grid-normalize-row-height {
   grid-auto-rows: 1fr;
 
 }
@@ -33,12 +34,11 @@
     padding: 60px 8vw 8vw 8vw;
 
     .title-group p {
-      @include text-xlarge-sofia;
-      margin: 16px 0 60px 0;
+      margin: 16px 0 50px 0;
     }
   }
 
-  .concept-features {
+  .grid-normalize-row-height {
     grid-auto-rows: unset;
   }
 }
