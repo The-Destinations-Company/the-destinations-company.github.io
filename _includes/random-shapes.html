@@ -1,11 +1,8 @@
-
-
 {% assign shapes = site.static_files | where: "shape", true %}
 {% assign min = 1 %}
 {% assign max = shapes.size %}
 {% assign diff = max | minus: min %}
 
 {% assign randomNumber = "now" | date: "%N" | modulo: diff | plus: min %}
-
 
 <img height="100" width="100" src="/assets/img/shapes/shape-{{randomNumber}}.svg" alt=""/>
