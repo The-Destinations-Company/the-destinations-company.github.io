@@ -319,7 +319,7 @@ function submitForm() {
         },
         error: (e) => {
             window.setTimeout(() => {
-                sendSuccess(e)
+                sendFail(e)
             }, 1500)
         }
     });
