@@ -1,6 +1,7 @@
 .header-hero {
   background-color: white;
   position: relative;
+  height: inherit;
 
   text-align: center;
 
@@ -39,6 +40,7 @@
   padding: 140px 36px;
 
 
+  width: auto;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 
