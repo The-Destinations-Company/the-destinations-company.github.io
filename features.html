@@ -3,38 +3,54 @@ title: How it Works
 layout: default
 ---
 
-<header class="header-standard header">
-    {% include navigation.html %}
-
-    <h1 class="heading-h2">{{page.title}}</h1>
+<header class="header header-standard-bg">
+    <div class="responsive-wrap">
+        <div class="header-standard">
+            {% include navigation.html %}
+            <h1 class="heading-h2">{{page.title}}</h1>
+        </div>
+    </div>
 </header>
-<section class="section-white statement-large">
-    <div class="">
-        <p class="">Destinations integrates the complete process of designing wayfinding systems.</p>
+
+<section class="section-white">
+    <div class="responsive-wrap">
+        <div class="statement-large">
+            <p class="">Destinations integrates the complete process of designing wayfinding systems.</p>
+        </div>
     </div>
 </section>
 <section class="section-purple">
+    <div class="responsive-wrap">
     {% include useCase.html useCaseName="destinations-useCase" %}
-</section>
-<section class="section-white statement-large feature-heading">
-    <div class="">
-        <p class="">Features, tailored to signage designers.</p>
     </div>
 </section>
+<section class="section-white">
+    <div class="responsive-wrap">
+        <div class="statement-large feature-heading">
+        <p class="">Features, tailored to signage designers.</p>
+        </div>
+    </div>
+</section>
+
 <section class="feature-section">
-    <div id="Route" class="feature section-white grid-3">
+    <div class="feature section-white">
+        <div id="Route" class="grid-3 responsive-wrap">
         <div class="feature-picture">
-            <img class="feature-img" src="assets/img/2907Flow10.png" srcset="assets/img/resized/2907Flow10-2160.png 2160w, assets/img/resized/2907Flow10-1440.png 1440w, assets/img/resized/2907Flow10-720.png 720w"
+            <img class="feature-img" src="assets/img/2907Flow10.png"
+                 srcset="assets/img/resized/2907Flow10-2160.png 2160w, assets/img/resized/2907Flow10-1440.png 1440w, assets/img/resized/2907Flow10-720.png 720w"
                  alt="Selected route in man view, list of decision points in sidebar">
         </div>
         <div class="feature-text">
             <img src="assets/img/shapes/shape-1.svg" alt=""/>
             <h3 class="">Keep track of your visitors routes</h3>
-            <p class="">Routes visualize your visitors path through a building. They are the foundation of the Destinations workflow and establish connections between entrances and rooms.</p>
+            <p class="">Routes visualize your visitors path through a building. They are the foundation of the
+                Destinations workflow and establish connections between entrances and rooms.</p>
         </div>
     </div>
+    </div>
 
-    <div id="Placement" class="feature feature-big section-white grid-3">
+    <div class="feature section-white">
+    <div id="Placement" class="feature-big grid-3 responsive-wrap">
         <div class="feature-picture">
             <img class="feature-img" src="assets/img/2907Flow16.png"
                  srcset="assets/img/resized/2907Flow16-2160.png 2160w, assets/img/resized/2907Flow16-1440.png 1440w, assets/img/resized/2907Flow16-720.png 720w"
@@ -45,14 +61,19 @@ layout: default
             <h3 class="">Sign placement and exploration made easy</h3>
         </div>
         <div class="feature-text">
-            <p class="">Automated detection of decision points makes it easy to find neccessary signage locations. It helps designers create routes without gaps that could confuse visitors. Signage is then linked to decision points and positioned on the floor plan. </p>
+            <p class="">Automated detection of decision points makes it easy to find neccessary signage locations. It
+                helps designers create routes without gaps that could confuse visitors. Signage is then linked to
+                decision points and positioned on the floor plan. </p>
         </div>
         <div class="feature-picture">
-            <img loading="lazy" src="./assets/img/new_sign.png" srcset="assets/img/resized/new_sign-516.png 516w, assets/img/resized/new_sign-344.png 344w, assets/img/resized/new_sign-172.png 172w" alt="New sign dialog box">
+            <img loading="lazy" src="./assets/img/new_sign.png"
+                 srcset="assets/img/resized/new_sign-516.png 516w, assets/img/resized/new_sign-344.png 344w, assets/img/resized/new_sign-172.png 172w"
+                 alt="New sign dialog box">
         </div>
     </div>
-
-    <div id="Database" class="feature feature-big section-white grid-3">
+    </div>
+    <div class="feature section-white">
+    <div id="Database" class="feature-big grid-3 responsive-wrap">
         <div class="feature-picture">
             <img class="feature-img" src="assets/img/2907Flow16.png"
                  srcset="assets/img/resized/2907Flow16-2160.png 2160w, assets/img/resized/2907Flow16-1440.png 1440w, assets/img/resized/2907Flow16-720.png 720w"
@@ -63,22 +84,31 @@ layout: default
             <h3 class="">The signage database keeps track of everythig so you don’t have to</h3>
         </div>
         <div class="feature-text">
-            <p class="">Templates designed in graphic design software can be assigned to previously created signs. For better scalabillity and speed, Destinations automates inserting properties like room names and numbers.</p>
+            <p class="">Templates designed in graphic design software can be assigned to previously created signs. For
+                better scalabillity and speed, Destinations automates inserting properties like room names and
+                numbers.</p>
         </div>
         <div class="feature-picture">
-            <img loading="lazy" src="./assets/img/database.png" srcset="assets/img/resized/database-411.png 411w, assets/img/resized/database-274.png 274w, assets/img/resized/database-137.png 137w"
+            <img loading="lazy" src="./assets/img/database.png"
+                 srcset="assets/img/resized/database-411.png 411w, assets/img/resized/database-274.png 274w, assets/img/resized/database-137.png 137w"
                  alt="Detail view of a sign and its editable properties">
         </div>
     </div>
-
-    <div id="Simulation" class="feature section-white grid-3">
+    </div>
+    <div class="feature section-white">
+    <div id="Simulation" class="grid-3 responsive-wrap">
         <div class="feature-picture">
-            <img class="feature-img" src="assets/img/2907Flow10.png" srcset="assets/img/resized/2907Flow10-2160.png 2160w, assets/img/resized/2907Flow10-1440.png 1440w, assets/img/resized/2907Flow10-720.png 720w"
+            <img class="feature-img" src="assets/img/2907Flow10.png"
+                 srcset="assets/img/resized/2907Flow10-2160.png 2160w, assets/img/resized/2907Flow10-1440.png 1440w, assets/img/resized/2907Flow10-720.png 720w"
                  alt="Simulate wayfinding designs with a built-in 3D view of a site.">
         </div>
         <div class="feature-text">
             <img src="assets/img/shapes/shape-1.svg" alt=""/>
             <h3 class="">Simulation</h3>
-            <p class="">Designers can view and evaluate sign positions from the perspective of future visitors. This makes it easy to place signs wherever visitors need information to navigate.</p>
+            <p class="">Designers can view and evaluate sign positions from the perspective of future visitors. This
+                makes it easy to place signs wherever visitors need information to navigate.</p>
         </div>
-    </div></section>
+    </div>
+    </div>
+
+</section>
