@@ -42,3 +42,10 @@
     grid-auto-rows: unset;
   }
 }
+
+@media screen and (min-width: 1700px) {
+  .content-grid.responsive-wrap {
+    //border-left: $border;
+    //border-right: $border;
+  }
+}
