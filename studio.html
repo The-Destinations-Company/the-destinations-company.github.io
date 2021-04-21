@@ -35,7 +35,14 @@ layout: default
         <div class="grid-normalize-row-height grid-2 grid-2-divider content-grid responsive-wrap">
             {% for member in site.data.team-members %}
             <div class="content-box-standard">
-            <img height="100" width="100" src="{{ member.profile-img}}" alt="{{member.name}}"/>
+
+                {% if member.profile-img %}
+
+                <img class="team-member-portrait" height="70" width="70" src="{{ member.profile-img}}" alt="{{member.name}}"/>
+                {% else %}
+                {% include random-shapes.html%}
+                {% endif %}
+
                 <h3 class="heading-h3">{{member.name}}</h3>
                 <p class="">{{member.profile-text}}</p>
             </div>
