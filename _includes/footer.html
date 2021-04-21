@@ -7,7 +7,8 @@
         <div class="sitemap">
             {% for link in site.pages %}
 {% unless link.name == "404.html" or link.name == "main.scss" or link.name == "/feed.xml" %}
-            <a href="{{ link.path }}">{{ link.title }}</a><br>
+
+            <a href="{{ link.dir}}{{ link.path }}">{{ link.title }}</a><br>
             {%endunless%}
             {% endfor %}
         </div>

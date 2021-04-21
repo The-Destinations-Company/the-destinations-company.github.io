@@ -7,7 +7,9 @@
     </div>
 </header>
 
-<section id="swup" class="section-white grid-3 grid-2-divider transition-fade">
+<section id="swup" class="section-white transition-fade">
+    <div class="grid-3 grid-2-divider responsive-wrap">
+
     <div id="article-list" class="article-list">
 
         {% for article in site.posts %}
@@ -34,5 +36,5 @@
     <div class="article-content">
         {{ include.content_a }}
     </div>
-
+    </div>
 </section>
