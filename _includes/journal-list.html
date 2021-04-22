@@ -28,12 +28,17 @@
                 <p class="heading-h4">{{ article.date | date: "%-d %B %Y"}}</p>
                 <h2 class="heading-h3 heading-article-list">{{ article.title }}</h2>
                 <!--                    <p class="">{{ article.date | date: "%-d %B %Y"}}</p>-->
-                <p class="author text-standard-sofia">{{ article.author }}</p>
+<!--                <p class="author text-standard-sofia">{{ article.author }}</p>-->
             </a>
         </div>
         {% endfor %}
     </div>
     <div class="article-content">
+
+
+        {{ include.title_a }}
+        {{ include.author_a }}
+
         {{ include.content_a }}
     </div>
     </div>

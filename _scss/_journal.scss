@@ -1,5 +1,4 @@
 .article-list {
-
   padding: 0;
 
   & > :not(:last-child) {
@@ -49,8 +48,8 @@
 
 
 @media screen and (min-width: 1700px) {
-  .article-list {
-    border-left: $border;
+  .current {
+    //border-left: $border;
   }
 }
 

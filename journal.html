@@ -7,4 +7,13 @@ layout: default
 {{ site.posts.first.content }}
 {% endcapture %}
 
-{% include journal-list.html content_a = article_content %}
+{% capture article_title %}
+{{ site.posts.first.title }}
+{% endcapture %}
+
+{% capture article_author %}
+{{ site.posts.first.author }}
+{% endcapture %}
+
+
+{% include journal-list.html content_a = article_content title_a = article_title author_a = article_author %}
