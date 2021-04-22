@@ -19,8 +19,6 @@
             {% assign in_title = include.title_a | downcase | strip %}
             {% assign this_title = article.title | downcase | strip %}
 
-            {% assign article_date = article.date %}
-
             {% if in_title == this_title %}
             {% assign current_class = " current" %}
             {% endif %}
@@ -55,7 +53,7 @@
             {% endif %}
             {% endfor %}
 
-            <p class="heading-h4">{{ article_date | date: "%B %-d, %Y"}}</p>
+            <p class="heading-h4">{{ include.date_a | date: "%B %-d, %Y"}}</p>
 
             <h2 class="text-xlarge-sofia article-heading">{{ include.title_a }}</h2>
             <div class="article-metadata">

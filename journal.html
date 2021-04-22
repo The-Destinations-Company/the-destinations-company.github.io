@@ -15,5 +15,8 @@ layout: default
 {{ site.posts.first.author }}
 {% endcapture %}
 
+{% capture article_date %}
+{{ site.posts.first.date }}
+{% endcapture %}
 
-{% include journal-list.html content_a = article_content title_a = article_title author_a = article_author %}
+{% include journal-list.html content_a = article_content title_a = article_title author_a = article_author date_a = article_date %}
