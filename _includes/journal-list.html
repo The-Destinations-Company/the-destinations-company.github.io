@@ -10,36 +10,55 @@
 <section id="swup" class="section-white transition-fade">
     <div class="grid-3 grid-2-divider responsive-wrap">
 
-    <div id="article-list" class="article-list">
+        <div id="article-list" class="article-list">
 
-        {% for article in site.posts %}
+            {% for article in site.posts %}
 
-        {% assign current_class = "" %}
+            {% assign current_class = "" %}
 
-        {% assign in_title = include.title_a | downcase | strip %}
-        {% assign this_title = article.title | downcase | strip %}
+            {% assign in_title = include.title_a | downcase | strip %}
+            {% assign this_title = article.title | downcase | strip %}
 
-        {% if in_title == this_title %}
-        {% assign current_class = " current" %}
-        {% endif %}
+            {% if in_title == this_title %}
+            {% assign current_class = " current" %}
+            {% endif %}
 
-        <div class="article-list-item{{current_class}}">
-            <a href="{{ article.url }}#article-list">
-                <p class="heading-h4">{{ article.date | date: "%-d %B %Y"}}</p>
-                <h2 class="heading-h3 heading-article-list">{{ article.title }}</h2>
-                <!--                    <p class="">{{ article.date | date: "%-d %B %Y"}}</p>-->
-<!--                <p class="author text-standard-sofia">{{ article.author }}</p>-->
-            </a>
+            <div class="article-list-item{{current_class}}">
+                <a href="{{ article.url }}#article-list">
+                    <p class="heading-h4">{{ article.date | date: "%-d %B %Y"}}</p>
+                    <h2 class="heading-h3 heading-article-list">{{ article.title }}</h2>
+                    <!--                    <p class="">{{ article.date | date: "%-d %B %Y"}}</p>-->
+                    <!--                <p class="author text-standard-sofia">{{ article.author }}</p>-->
+                </a>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
-    </div>
-    <div class="article-content">
+        <div class="article-content">
 
+            {% assign author_name = page.author %}
 
-        {{ include.title_a }}
-        {{ include.author_a }}
+            {% assign name = site.data.authors[include.author_a] %}
 
-        {{ include.content_a }}
-    </div>
+            {% for author in site.data.authors %}
+
+            {% assign in_author = author.name | downcase | strip %}
+            {% assign this_author = include.author_a | downcase | strip %}
+
+            {% if this_author == in_author %}
+
+            {% assign article_author = author.name %}
+            {% assign article_author_img = author.img %}
+            {% assign article_author_desc = author.description %}
+
+            {% endif %}
+            {% endfor %}
+
+            <h2 class="text-xlarge-sofia article-heading">{{ include.title_a }}</h2>
+            <img src="{{article_author_img}}" alt="{{ article_author }} small profile">
+            <p>{{ article_author }}</p>
+            <p>{{ article_author_desc }}</p>
+            <p>---</p>
+            {{ include.content_a }}
+        </div>
     </div>
 </section>
