@@ -15,5 +15,9 @@ layout: default
 {{ page.author }}
 {% endcapture %}
 
+{% capture article_date %}
+{{ page.date }}
+{% endcapture %}
+
 {% include journal-list.html content_a = article_content title_a = article_title author_a = article_author %}
 

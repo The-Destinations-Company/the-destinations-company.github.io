@@ -19,13 +19,15 @@
             {% assign in_title = include.title_a | downcase | strip %}
             {% assign this_title = article.title | downcase | strip %}
 
+            {% assign article_date = article.date %}
+
             {% if in_title == this_title %}
             {% assign current_class = " current" %}
             {% endif %}
 
             <div class="article-list-item{{current_class}}">
                 <a href="{{ article.url }}#article-list">
-                    <p class="heading-h4">{{ article.date | date: "%-d %B %Y"}}</p>
+                    <p class="heading-h4">{{ article.date | date: "%B %-d, %Y"}}</p>
                     <h2 class="heading-h3 heading-article-list">{{ article.title }}</h2>
                     <!--                    <p class="">{{ article.date | date: "%-d %B %Y"}}</p>-->
                     <!--                <p class="author text-standard-sofia">{{ article.author }}</p>-->
@@ -53,11 +55,16 @@
             {% endif %}
             {% endfor %}
 
+            <p class="heading-h4">{{ article_date | date: "%B %-d, %Y"}}</p>
+
             <h2 class="text-xlarge-sofia article-heading">{{ include.title_a }}</h2>
-            <img src="{{article_author_img}}" alt="{{ article_author }} small profile">
-            <p>{{ article_author }}</p>
-            <p>{{ article_author_desc }}</p>
-            <p>---</p>
+            <div class="article-metadata">
+                <img class="author-img" src="{{article_author_img}}" alt="{{ article_author }} small profile">
+                <div>
+                    <p class="author-name text-large-sofia">{{ article_author }}</p>
+                    <p class="author-desc text-large-sofia">{{ article_author_desc }}</p>
+                </div>
+            </div>
             {{ include.content_a }}
         </div>
     </div>

@@ -1,12 +1,15 @@
 .article-list {
   padding: 0;
 
-  & > :not(:last-child) {
-    border-bottom: $border;
-  }
+  //TODO: reenable if article list is longer, otherwise there will be a double border
+  //& > :not(:last-child) {
+  //  border-bottom: $border;
+  //}
 
   .article-list-item {
     padding: 20px 36px 20px;
+    border-bottom: $border;
+
   }
 
   .heading-h4 {
@@ -32,13 +35,34 @@
   p {
     margin: 0 0 1em 0;
 
-    &:last-of-type{
+    &:last-of-type {
       margin-bottom: 0;
     }
   }
 
+  .article-heading {
+    margin: .6em 0;
+  }
 
+  .article-metadata {
+    display: flex;
+    //margin-top: 15px;
+    margin-bottom: 4em;
+  }
 
+  .author-img {
+    width: 45px;
+    height: 100%;
+    margin-right: 25px;
+  }
+
+  .author-name {
+    margin-top: .2em;
+    margin-bottom: .2em;
+  }
+  .author-desc {
+    color: $grey-70;
+  }
 }
 
 .current {
@@ -52,7 +76,7 @@
 
 @media screen and (min-width: 1700px) {
   .current {
-    //border-left: $border;
+    border-left: $border;
   }
 }
 

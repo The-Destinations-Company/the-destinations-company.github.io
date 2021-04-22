@@ -160,6 +160,10 @@ h4, .heading-h4 {
   @include text-xlarge-sofia;
 }
 
+.text-large-sofia {
+  @include text-large-sofia;
+}
+
 .text-standard-sofia {
   @include text-standard-sofia;
 }
