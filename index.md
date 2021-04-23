@@ -52,25 +52,25 @@ layout: default
 <section class="section-yellow">
     <div class="responsive-wrap features-collage">
         <img loading="lazy"
-             src="./assets/img/2907Flow16.png"
-             srcset="assets/img/resized/2907Flow16-2160.png 2160w, assets/img/resized/2907Flow16-1440.png 1440w, assets/img/resized/2907Flow16-720.png 720w"
+             src="./assets/img/dest_information_routes_main.png"
+             srcset="assets/img/resized/dest_information_routes_main-2160.png 2160w, assets/img/resized/dest_information_routes_main-1440.png 1440w, assets/img/resized/dest_information_routes_main-720.png 720w"
              alt="Route Creation and sign placement">
         <img loading="lazy"
-             src="./assets/img/2907Flow06.png"
-             srcset="assets/img/resized/2907Flow06-2160.png 2160w, assets/img/resized/2907Flow06-1440.png 1440w, assets/img/resized/2907Flow06-720.png 720w"
+             src="./assets/img/dest_visitor_routes_main.png"
+             srcset="assets/img/resized/dest_visitor_routes_main-2160.png 2160w, assets/img/resized/dest_visitor_routes_main-1440.png 1440w, assets/img/resized/dest_visitor_routes_main-720.png 720w"
              alt="Route Creation and sign placement">
-        <img loading="lazy" src="./assets/img/new_sign.png"
-             srcset="assets/img/resized/new_sign-516.png 516w, assets/img/resized/new_sign-344.png 344w, assets/img/resized/new_sign-172.png 172w"
+        <img loading="lazy" src="./assets/img/dest_create_sign_detail.png"
+             srcset="assets/img/resized/dest_create_sign_detail-516.png 516w, assets/img/resized/dest_create_sign_detail-344.png 344w, assets/img/resized/dest_create_sign_detail-172.png 172w"
              alt="Route Creation and sign placement">
 
         <div>
-            <img loading="lazy" src="./assets/img/database.png"
-                 srcset="assets/img/resized/database-411.png 411w, assets/img/resized/database-274.png 274w, assets/img/resized/database-137.png 137w"
+            <img loading="lazy" src="./assets/img/dest_manage_sign_detail.png"
+                 srcset="assets/img/resized/dest_manage_sign_detail-411.png 411w, assets/img/resized/dest_manage_sign_detail-274.png 274w, assets/img/resized/dest_manage_sign_detail-137.png 137w"
                  alt="">
         </div>
         <div>
-            <img loading="lazy" src="./assets/img/route.png"
-                 srcset="assets/img/resized/route-411.png 411w, assets/img/resized/route-274.png 274w, assets/img/resized/route-137.png 137w"
+            <img loading="lazy" src="./assets/img/dest_route_detail.png"
+                 srcset="assets/img/resized/dest_route_detail-411.png 411w, assets/img/resized/dest_route_detail-274.png 274w, assets/img/resized/route-137.png 137w"
                  alt="">
         </div>
     </div>
