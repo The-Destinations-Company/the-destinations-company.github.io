@@ -389,6 +389,21 @@ html.is-animating .transition-fade {
   height: inherit;
 }
 
+.privacy-policy-text {
+
+  h1 {
+    @include text-xlarge-sofia;
+  }
+
+  h2 {
+    @include heading-h3
+  }
+
+  ul {
+    @include text-standard-bask
+  }
+}
+
 @media screen and (min-width: 1700px) {
   .responsive-wrap {
     max-width: 1700px;
