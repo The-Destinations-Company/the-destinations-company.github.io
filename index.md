@@ -117,7 +117,7 @@ layout: default
                 <h2 class="heading-h4">Next Up</h2>
                 <p>This project has been chosen to be part of the goHfG founders initiative. </p>
             </div>
-            <a class="button button-black" href="{% post_url 2020-10-11-gohfg %}
+            <a class="button button-black" href="{% post_url 2020-10-11-gohfg %}#article-list
 "><span>Read the journal entry</span></a>
         </div>
     </div>

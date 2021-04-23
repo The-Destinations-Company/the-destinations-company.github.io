@@ -44,7 +44,8 @@ layout: default
                 {% endif %}
 
                 <h3 class="heading-h3">{{member.name}}</h3>
-                <p class="">{{member.profile-text}}</p>
+                <p class="">{{member.profile-job | newline_to_br }}</p>
+                <p class="">{{member.profile-text | newline_to_br }}</p>
             </div>
 
             {% if forloop.last %}
