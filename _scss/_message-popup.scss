@@ -15,6 +15,11 @@
 }
 
 .message-popup {
+  &::-webkit-scrollbar {
+    display: none;
+    //hopefully this doesn't impact mobile in any way
+  }
+
   opacity: 0;
   overflow: scroll;
   visibility: hidden;
