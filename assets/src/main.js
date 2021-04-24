@@ -22,7 +22,7 @@ $(function () {
             const firstFigure = $(".use-case-figure-group").find(">:first-child")
 
             firstFigure.addClass("active")
-            firstFigure.children().show()
+            firstFigure.children().addClass("active")
 
             const video = firstFigure.find(">:first-child").get(0).play()
             const firstSelector = $(".use-case-selector-group").find(">:first-child")
@@ -70,8 +70,8 @@ $(function () {
             $(activeFig).siblings().removeClass("active")
 
 
-            $(activeFig).children().show()
-            $(activeFig).siblings().children().hide()
+            $(activeFig).children().addClass("active")
+            $(activeFig).siblings().children().removeClass("active")
 
             $(activeFig).find(">:first-child").get(0).currentTime = 0
             $(activeFig).find(">:first-child").get(0).play()
@@ -101,8 +101,8 @@ $(function () {
         $(activeFig).siblings().removeClass("active")
 
 
-        $(activeFig).children().show()
-        $(activeFig).siblings().children().hide()
+        $(activeFig).children().addClass("active")
+        $(activeFig).siblings().children().removeClass("active")
 
         $(activeFig).find(">:first-child").get(0).currentTime = 0
         $(activeFig).find(">:first-child").get(0).play()
