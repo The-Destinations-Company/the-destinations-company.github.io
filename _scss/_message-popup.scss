@@ -63,7 +63,6 @@
   /* height: fit-content; */
   margin: auto 0;
   background-color: transparent;
-  cursor: pointer;
 
   &:hover {
 
@@ -112,7 +111,7 @@
   }
 
 
-  input[type="checkbox" i] {
+  input[type="checkbox"] {
     height: 20px;
     width: 20px;
     background-color: #E7E7E7;
@@ -123,6 +122,7 @@
     appearance: none;
     border: $border;
     position: relative;
+    cursor: pointer;
   }
 
   input[type="checkbox"]:checked:after {

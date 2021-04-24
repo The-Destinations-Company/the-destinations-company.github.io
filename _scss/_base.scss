@@ -40,6 +40,7 @@ $border: 1px $grey-100 solid;
 
 button {
   border-style: none;
+  cursor: pointer;
 }
 
 //button:focus {
@@ -226,6 +227,7 @@ html.is-animating .transition-fade {
 
   .use-case-figure-group {
     width: inherit;
+    box-shadow: 0 14px 55px rgba(0, 0, 0, 0.3);
   }
 
   .use-case-figure {
@@ -373,9 +375,12 @@ html.is-animating .transition-fade {
     width: 100%;
     padding: 8vw;
     margin: 0;
-
     figure {
       margin: 0;
+    }
+
+    video {
+      box-shadow: 0 14px 55px rgba(0, 0, 0, 0.3);
     }
   }
 
