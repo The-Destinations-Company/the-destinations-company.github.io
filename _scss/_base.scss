@@ -13,17 +13,18 @@ $border: 1px $grey-100 solid;
 
 .header {
   height: 82vh;
-  background-color: $yellow-70;
 }
 
 .header-standard {
+  height: inherit;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  position: relative;
 
 
   h1 {
-    margin: 0 0 36px 36px;
+    margin: auto 0 36px 36px;
     width: 66%;
     //line-height: 100%;
   }
@@ -33,8 +34,13 @@ $border: 1px $grey-100 solid;
   }
 }
 
+.header-standard-bg {
+  background-color: $yellow-70;
+}
+
 button {
   border-style: none;
+  cursor: pointer;
 }
 
 //button:focus {
@@ -93,8 +99,14 @@ button {
   background-color: $yellow-70;
 }
 
+.section-light-yellow {
+  background-color: $yellow-30;
+  border-top: $border;
+}
+
 .section-white {
   border-top: $border;
+  background-color: white;
 }
 
 .section-green {
@@ -205,13 +217,21 @@ html.is-animating .transition-fade {
 }
 
 .use-case-container {
+  width: inherit;
+  margin: 0 auto;
   padding: 100px 0 50px;
   display: flex;
   align-items: center;
   flex-direction: column;
+  max-width: 75%;
+
+  .use-case-figure-group {
+    width: inherit;
+    box-shadow: 0 14px 55px rgba(0, 0, 0, 0.3);
+  }
 
   .use-case-figure {
-    width: 75vw;
+    width: inherit;
     padding: 0;
     margin: 0;
 
@@ -355,9 +375,12 @@ html.is-animating .transition-fade {
     width: 100%;
     padding: 8vw;
     margin: 0;
-
     figure {
       margin: 0;
+    }
+
+    video {
+      box-shadow: 0 14px 55px rgba(0, 0, 0, 0.3);
     }
   }
 
@@ -366,3 +389,30 @@ html.is-animating .transition-fade {
   }
 }
 
+.responsive-wrap {
+  width: 100%;
+  height: inherit;
+}
+
+.privacy-policy-text {
+
+  h1 {
+    @include text-xlarge-sofia;
+  }
+
+  h2 {
+    @include heading-h3
+  }
+
+  ul {
+    @include text-standard-bask
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .responsive-wrap {
+    max-width: 1700px;
+    margin: auto;
+    width: 100%;
+  }
+}

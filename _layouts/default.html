@@ -21,7 +21,7 @@ layout: compress
     <meta name="twitter:site" content="@_kaimagnus"/>
     <meta name="twitter:title" content="{{ site.title }}{{ page.title }}"/>
     <meta name="twitter:description" content="{{ page.description }}"/>
-    <meta name="twitter:image" content="http://www.build-destinations.com/twitter-image.png"/>
+    <meta name="twitter:image" content="https://www.dev.build-destinations.com/twitter-image.png"/>
 
 
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -66,23 +66,34 @@ layout: compress
             font-family: "SofiaPro";
             font-weight: 700;
             font-display: swap;
-            src: url('assets/fonts/webFonts/SofiaProBold/font.woff2') format('woff2'), url('assets/fonts/webFonts/SofiaProBold/font.woff') format('woff');
+            src: url('/assets/fonts/webFonts/SofiaProBold/font.woff2') format('woff2'), url('/assets/fonts/webFonts/SofiaProBold/font.woff') format('woff');
         }
         @font-face {
             font-family: "SofiaPro";
             font-weight: 600;
             font-display: swap;
-            src: url('assets/fonts/webFonts/SofiaProSemiBold/font.woff2') format('woff2'), url('assets/fonts/webFonts/SofiaProSemiBold/font.woff') format('woff');
+            src: url('/assets/fonts/webFonts/SofiaProSemiBold/font.woff2') format('woff2'), url('/assets/fonts/webFonts/SofiaProSemiBold/font.woff') format('woff');
         }
         @font-face {
             font-family: "SofiaPro";
             font-weight: 400;
             font-display: swap;
-            src: url('assets/fonts/webFonts/SofiaProRegular/font.woff2') format('woff2'), url('assets/fonts/webFonts/SofiaProRegular/font.woff') format('woff');
+            src: url('/assets/fonts/webFonts/SofiaProRegular/font.woff2') format('woff2'), url('/assets/fonts/webFonts/SofiaProRegular/font.woff') format('woff');
+        }
+
+        #popup-bg {
+            visibility: hidden;
+        }
+
+        .message-popup {
+            visibility: hidden;
+        }
+
+        .popup-success-notification {
+            visibility: hidden;
         }
 
     </style>
-<!--    <link rel="stylesheet" href="/assets/fonts/destinations-fonts.css">-->
     <link rel="stylesheet" href="/assets/css/main.css?v=0.1.0">
 </head>
 <body>
@@ -92,7 +103,7 @@ layout: compress
 {% include footer.html %}
 
 
-<!--<script src="/assets/src/swup.min.js"></script>-->
+<script src="/assets/src/swup.min.js"></script>
 <script src="/assets/src/jquery-3.6.0.min.js"></script>
 <script src="/assets/src/main.js?v=1.0"></script>
 </body>

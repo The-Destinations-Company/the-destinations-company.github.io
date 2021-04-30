@@ -1,6 +1,8 @@
 .header-hero {
 
   background-color: white;
+  position: relative;
+  height: inherit;
 
   text-align: center;
 
@@ -46,8 +48,6 @@
 
 .vision {
   padding: 95px 36px 90px 36px;
-  background-color: $yellow-30;
-  border-top: $border;
 
   .heading-h4 {
     margin: 14px 0;
@@ -63,6 +63,7 @@
   padding: 140px 36px;
 
 
+  width: auto;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
 
@@ -165,6 +166,10 @@
       margin: 10px 8vw 4vh;
     }
 
+    br {
+      display: none;
+    }
+
     h1 {
       margin-bottom: 2vh;
     }
@@ -175,15 +180,17 @@
   }
   .vision {
     padding: 50px 28px;
-    p{
+
+    p {
       margin: 28px 0;
     }
   }
 
   .features-collage {
     padding: 50px 28px;
+    max-width: fit-content;
   }
-  }
+}
 
 @media screen and (max-width: 450px) {
 
@@ -257,5 +264,12 @@
     h4 {
       margin: 0.4em 0 0.8em;
     }
+  }
+}
+
+@media screen and (min-width: 1700px) {
+  .feature-grid.responsive-wrap {
+    //border-left: $border;
+    //border-right: $border;
   }
 }

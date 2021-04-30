@@ -15,6 +15,11 @@
 }
 
 .message-popup {
+  &::-webkit-scrollbar {
+    display: none;
+    //hopefully this doesn't impact mobile in any way
+  }
+
   opacity: 0;
   overflow: scroll;
   visibility: hidden;
@@ -63,7 +68,6 @@
   /* height: fit-content; */
   margin: auto 0;
   background-color: transparent;
-  cursor: pointer;
 
   &:hover {
 
@@ -112,7 +116,7 @@
   }
 
 
-  input[type="checkbox" i] {
+  input[type="checkbox"] {
     height: 20px;
     width: 20px;
     background-color: #E7E7E7;
@@ -123,6 +127,7 @@
     appearance: none;
     border: $border;
     position: relative;
+    cursor: pointer;
   }
 
   input[type="checkbox"]:checked:after {
@@ -281,6 +286,7 @@
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -301,7 +307,7 @@
 
 #response-wrapper.response {
   transform: translateY(0%);
-
+  visibility: visible;
 }
 
 .popup-success-notification {

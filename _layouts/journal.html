@@ -1,0 +1,58 @@
+---
+layout: default
+---
+
+<header class="header header-standard-bg">
+    <div class="responsive-wrap">
+        <div class="header-standard">
+            {% include navigation.html %}
+            <h1 class="heading-h2">Journal</h1>
+        </div>
+    </div>
+</header>
+
+<section id="swup" class="section-white transition-fade">
+    <div class="grid-3 grid-2-divider responsive-wrap">
+
+        <div id="article-list" class="article-list">
+
+            {% for article in site.posts %}
+
+            {% assign current_class = "" %}
+
+            {% assign in_title = page.title | downcase | strip %}
+            {% assign this_title = article.title | downcase | strip %}
+
+            {% if in_title == this_title %}
+            {% assign current_class = " current" %}
+            {% endif %}
+
+            <div class="article-list-item{{current_class}}">
+                <a href="{{ article.url }}#article-list">
+                    <p class="heading-h4">{{ article.date | date: "%-d %B %Y"}}</p>
+                    <h2 class="heading-h3 heading-article-list">{{ article.title }}</h2>
+                    <!--                    <p class="">{{ article.date | date: "%-d %B %Y"}}</p>-->
+                    <!--                <p class="author text-standard-sofia">{{ article.author }}</p>-->
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="article-content">
+
+
+
+            {% assign author_name = page.author %}
+
+            {% assign name = site.data.page[page.author] %}
+            <p>---</p>
+            {{ post.author }}
+            {{ author_name }}
+            {{ name }}
+            <p>---</p>
+            {{ content }}
+
+
+
+        </div>
+    </div>
+</section>

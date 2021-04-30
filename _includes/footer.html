@@ -1,19 +1,24 @@
-
 <footer class="section-white grid-3">
-
     <div>
         <h1 class="heading-h4">Destinations</h1>
         <p>Software for signage planning and simulation</p>
 
         <div class="sitemap">
+            <a href="index.html">Home</a><br>
+
             {% for link in site.pages %}
-{% unless link.name == "404.html" or link.name == "main.scss" or link.name == "/feed.xml" %}
-            <a href="{{ link.path }}">{{ link.title }}</a><br>
+{% unless link.name == "404.html" or
+            link.name == "main.scss" or
+            link.name == "/feed.xml" or
+            link.name == "index.md" or
+            link.name == "privacy.html" %}
+
+            <a href="{{ link.dir}}{{ link.path }}">{{ link.title }}</a><br>
             {%endunless%}
             {% endfor %}
         </div>
         <p>Say hi hello@destinations.com</p>
-        <p>© 2020 Destinations — <a href="/imprint.html">Legal</a></p>
+        <p>© 2020 Destinations — <a href="/privacy.html">Legal</a></p>
     </div>
     <div>
         <h1 class="heading-h4">Bachelor Thesis</h1>
@@ -27,6 +32,7 @@
         <h1 class="heading-h4">GoHfG Team</h1>
 <p>Short explainations of gohfg.</p>
         <p><a href="http://www.kaimagnus.de">Kai Magnus Müller</a>, <a href="http://www.martinwehl.de"> Martin Wehl</a> and <a href="http://www.JohannaWellnitz.de"> Johanna Wellnitz</a></p>
+    </div>
     </div>
 </footer>
 
