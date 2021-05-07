@@ -34,18 +34,49 @@ layout: default
     <section class="section-white">
         <div class="grid-normalize-row-height grid-2 grid-2-divider content-grid responsive-wrap">
             {% for member in site.data.team-members %}
-            <div class="content-box-standard">
+            <div class="content-box-standard member-profile reset-padding">
+                <div class="member-content">
 
-                {% if member.profile-img %}
 
-                <img class="team-member-portrait" height="70" width="70" src="{{ member.profile-img}}" alt="{{member.name}}"/>
-                {% else %}
-                {% include random-shapes.html%}
+                    {% if member.profile-img %}
+
+                    <img class="team-member-portrait" height="70" width="70" src="{{ member.profile-img}}"
+                        alt="{{member.name}}" />
+                    {% else %}
+                    {% include random-shapes.html%}
+                    {% endif %}
+
+                    <h3 class="heading-h3">{{member.name}}</h3>
+                    <p class="">{{member.profile-job | newline_to_br }}</p>
+                    <p class="">{{member.profile-text | newline_to_br }}</p>
+                </div>
+
+                {% if member.links %}
+                <div class="member-links">
+
+                    {% for link in member.links %}
+                    
+                    {% unless link[1] == nil %}
+                        <a href="{{ link[1]}}">
+
+                            {% if link[0] == "github-link" %}
+                            {% assign href ="/assets/src/github-icon.svg" %}
+                            {% elsif link[0] == "twitter-link" %}
+                            {% assign href = "/assets/src/twitter-icon.svg" %}
+                            {% elsif link[0] == "web-link" %}
+                            {% assign href = "/assets/src/web-icon.svg" %}
+                            {% elsif link[0] == "linkedin-link" %}
+                            {% assign href = "/assets/src/linkedin-icon.svg" %}
+                            {% endif %}
+
+                            <img src="{{ href }}" alt="{{ link[1] }}">
+                        </a>
+                        {% endunless %}
+
+                    {% endfor %}
+                </div>
                 {% endif %}
 
-                <h3 class="heading-h3">{{member.name}}</h3>
-                <p class="">{{member.profile-job | newline_to_br }}</p>
-                <p class="">{{member.profile-text | newline_to_br }}</p>
             </div>
 
             {% if forloop.last %}

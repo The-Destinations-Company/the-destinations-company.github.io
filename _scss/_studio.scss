@@ -1,3 +1,39 @@
+.reset-padding {
+  padding: 0;
+}
+
+.member-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.member-content {
+  padding: 36px;
+}
+
 .team-member-portrait {
-  margin: 15px 0;
+  margin-bottom: 15px;
+}
+
+.member-links {
+  margin-top: auto;
+  width: 100%;
+  border-top: $border;
+
+  display: flex;
+  flex-direction: row;
+  a {
+    line-height: 0;
+    padding: 36px;
+    border-right: $border;
+
+    &:hover {
+      background-color: $yellow-70;
+    }
+  }
+
+  img {
+    width: 35px;
+    height: 100%;
+  }
 }
