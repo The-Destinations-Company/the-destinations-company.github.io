@@ -1,3 +1,87 @@
+.reset-padding {
+  padding: 0;
+}
+
+.member-profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.member-content {
+  padding: 36px;
+}
+
 .team-member-portrait {
-  margin: 15px 0;
+  margin-bottom: 15px;
+}
+
+// .member-links {
+//   margin-top: auto;
+//   width: 100%;
+//   border-top: $border;
+
+//   display: flex;
+//   flex-direction: row;
+//   a {
+//     flex-grow: 1;
+//     line-height: 0;
+//     padding: 36px;
+//     border-right: $border;
+//     display: flex;
+//     &:hover {
+//       background-color: $yellow-70;
+//     }
+//   }
+
+
+//   a:last-of-type {
+//     border-right: none;
+//   }
+
+//   img {
+//     margin: auto;
+//     width: 35px;
+//     height: 100%;
+//   }
+// }
+
+.member-links {
+  margin-top: auto;
+  width: 100%;
+  border-top: $border;
+
+  display: flex;
+  flex-direction: row;
+  a {
+    line-height: 0;
+    padding: 36px;
+    border-right: $border;
+
+    &:hover {
+      background-color: $yellow-70;
+    }
+  }
+
+  img {
+    width: 35px;
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .member-links {
+    a {
+      flex-grow: 1;
+      padding: 36px 0;
+      display: flex;
+    }
+
+    img {
+      margin: 0 auto;
+    }
+
+    a:last-of-type {
+      border-right: none;
+    }
+  }
 }
