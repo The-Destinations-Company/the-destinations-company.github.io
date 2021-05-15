@@ -4,48 +4,15 @@
     </video>
     <figcaption class="article-figcaption">{{ include.caption }}</figcaption>
 </figure>
-{% elsif media == "image" %}
-
-
-{% if picture_class %}
-
-{% capture picture_class2 %}{{ picture_class }} {% endcapture %}
-
-{% endif %}
+{% elsif include.media == "image" %}
 
 <figure class="article-figure">
-
-
-    {% capture srcset %}
-    {% for i in resized %}
-    /{{ i.path }} {{ i.width }}w,
-    {% endfor %}
-    {% endcapture %}
-
-    {% capture imgClass %}
-    {%- if border == "true" -%}
-    project-media
-    {%- elsif border == "false" -%}
-    project-media-noborder
-    {%- endif -%}
-    {% endcapture %}
-
-    {% capture imgClass %}
-    {%- if border == "true" -%}
-    project-media
-    {%- elsif border == "false" -%}
-    project-media-noborder
-    {%- endif -%}
-    {% endcapture %}
-
     <div class="media-wrapper">
-        <img class="{{ picture_class2 }}{{ imgClass }} lightbox-source" src="/{{ path }}" alt="{{ alt }}"
-            srcset="{{ srcset | strip_newlines }} /{{ path }} {{ original.width }}w">
+        <img class="lightbox-source" src="/{{ include.path }}" alt="{{ include.alt }}">
     </div>
 
-
-    {% if caption %}
-    <figcaption class="article-figcaption">{{ caption }}</figcaption>
+    {% if include.caption %}
+    <figcaption class="article-figcaption">{{ include.caption }}</figcaption>
     {% endif %}
 </figure>
 

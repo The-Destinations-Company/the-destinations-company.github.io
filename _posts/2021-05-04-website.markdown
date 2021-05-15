@@ -6,10 +6,9 @@ category: weeknotes
 ---
 
 {% comment %}
-{% responsive_image
-media: "image"
-path: assets/img/articles/website-final2x.png
-alt: ""
+{% include media.html media="image"
+path="assets/img/articles/website-final2x.png"
+alt=""
 %}
 {% endcomment %}
 
@@ -30,19 +29,19 @@ Our first versions' design was more or less based on the slides of our final pre
 We first started exploring other existing product pages and identities to get an idea of how other products are presented. I then arranged our findings on two axis to better understand the space that we are operating in and where we want to position ourselves.
 
 
-{% responsive_image
-media: "image"
-path: assets/img/articles/InspirationMoodboard.jpg
-alt: "Categorization of product pages along neutral - friendly and standard - avant-garde axis"
-caption: "A lot of product pages operate in the bottom left - unemotional and fairly 'standard' - quadrant." %}
+{% include media.html
+media= "image"
+path="assets/img/articles/InspirationMoodboard.jpg"
+alt= "Categorization of product pages along neutral - friendly and standard - avant-garde axis"
+caption= "A lot of product pages operate in the bottom left - unemotional and fairly 'standard' - quadrant." %}
 
  We are three designers working together currently, so we wanted to position our product in the upper left quadrant to play a bit more into our strengths of communication and design. To narrow down our options, we conducted a dot vote and throughout the next few weeks, we started working separately on our own concepts and presented them to each other every Saturday. This way we could save time and produce more varied concepts.
 
-{% responsive_image
-media: "image"
-path: assets/img/articles/website-concepts2x.png
-alt: ""
-caption: "Some in-progress designs by Johanna and me." %}
+{% include media.html
+media="image"
+path="assets/img/articles/website-concepts2x.png"
+alt=""
+caption="Some in-progress designs by Johanna and me." %}
 
 > Almost naturally we got into an asynchronous working process, powered by leaving each other comments on our designs.
 
@@ -53,11 +52,11 @@ Almost naturally we got into an asynchronous working process, powered by leaving
 
 ## The New Site
 
-{% responsive_image
-media: "image"
-path: assets/img/articles/website-final2x.png
-alt: ""
-caption: "Our final design. " %}
+{% include media.html
+media= "image"
+path="assets/img/articles/website-final2x.png"
+alt=""
+caption="Our final design. " %}
 
 You're browsing the redesign right now!
 
@@ -69,10 +68,10 @@ The main page serves as an Introduction to our project with a tagline, the three
 
 One of our main goals was to get in contact with potential partners or signage designers, get feedback and engage in discussions. For this reason we decided to build a message system instead of a contact email that is usually seen. Visitors can simply write anything they like, without having to worry about writing a whole email and if they want us to respond they can leave their email as well. 
 
-{% responsive_image
-media: "image"
-path: assets/img/articles/website-popup.png
-caption: "With this message form, visitors can message us without having to pull up an email application. This reduces friction and will result in more feedback." %}
+{% include media.html
+media= "image"
+path="assets/img/articles/website-popup.png"
+caption="With this message form, visitors can message us without having to pull up an email application. This reduces friction and will result in more feedback." %}
 
 Back to our website. Next we have a 'How it works' page detailing our application concept. They include similar content to our old website, but expand on it and are brought in line with our new identity. 
 
