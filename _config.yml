@@ -32,6 +32,7 @@ permalink: /journal/:title
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-responsive-image
 
 # Exclude from processing.
 # The following items will not be processed, by default.
@@ -75,3 +76,14 @@ defaults:
       path: "assets/img/shapes/*"
     values:
       shape: true
+
+responsive_image:
+  template: _includes/media.html
+  output_path_format: assets/img/articles/resized/%{filename}-%{width}.%{extension}
+  default_quality: 90
+  sizes:
+    - width: 320
+    - width: 480
+    - width: 550
+    - width: 850
+    - width: 1700
