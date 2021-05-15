@@ -14,9 +14,7 @@ alt: ""
 {% endcomment %}
 
 
-It's time for a new Website.
-
-In February, I came back from my small break during winter that I took after finishing my degree. Around that time we placed top three at the goHfG award and decided now it's the right time to get serious about our project's presentation and to show it to the outside world. 
+In February, when we placed top three at the goHfG award, we decided to get serious about our project's presentation and to show it to the outside world. So it was time for a new Website.
 
 Directly after we officially finished our project at the University I developed a small website to show and explain what our project is about and what our thoughts were while designing it. We wanted to recruit more team members for our project and have a platform for news, announcements, and new developments, with the goal to get the attention of other people and make them interested in working with us. The design was done rather quick with a video showing our use case being in the center, and highlights of a few major features not unlike a standard product page. 
 
