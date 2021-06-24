@@ -10,9 +10,9 @@
     twitter-link: https://twitter.com/_kaimagnus
     linkedin-link: https://www.linkedin.com/in/kai-magnus-müller-25a176207/
     web-link: https://www.kaimagnus.de
-  
+
 - name: Martin Wehl
-  profile-img:
+  profile-img: /assets/img/team/mwehl.jpg
   profile-job: Designer & Co-Founder
 
   profile-text: |
@@ -20,10 +20,10 @@
 
     Martin is especially interested in concept development as well as UX research and consultancy, preferring a method-driven approach when tackling problems.
   links:
-    github-link: 
-    twitter-link: 
-    linkedin-link: 
-    web-link: 
+    github-link:
+    twitter-link: https://twitter.com/martin_wehl
+    linkedin-link: https://de.linkedin.com/in/martin-wehl-57b12413b
+    web-link:
 - name: Johanna Wellnitz
   profile-img: /assets/img/team/jwellnitz.jpg
   profile-job: Designer & Co-Founder
