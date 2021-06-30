@@ -10,13 +10,20 @@
     twitter-link: https://twitter.com/_kaimagnus
     linkedin-link: https://www.linkedin.com/in/kai-magnus-müller-25a176207/
     web-link: https://www.kaimagnus.de
-  
+
 - name: Martin Wehl
-  profile-img:
+  profile-img: /assets/img/team/mwehl.jpg
   profile-job: Designer & Co-Founder
 
   profile-text: |
-    Member introduction placeholder. Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you.
+    Martin is a digital product designer. Prior to his studies in interaction design, he was working as a screen printer and media designer with focus on the planning and realization of indoor signage and wayfinding systems.
+
+    Martin is especially interested in concept development as well as UX research and consultancy, preferring a method-driven approach when tackling problems.
+  links:
+    github-link:
+    twitter-link: https://twitter.com/martin_wehl
+    linkedin-link: https://de.linkedin.com/in/martin-wehl-57b12413b
+    web-link:
 - name: Johanna Wellnitz
   profile-img: /assets/img/team/jwellnitz.jpg
   profile-job: Designer & Co-Founder
@@ -31,5 +38,11 @@
     web-link: http://www.johannawellnitz.de
 - name: You?
   profile-img:
-  profile-text: >-
-    Member introduction placeholder. Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you.
+  profile-job: Computer Scientist & Co-Founder<br>with engineering background
+
+  profile-text: |
+    So, Destinations is exatly your topic and you are passionate about tackling two big challenges:
+    1. You join our team as a co-founder collaborating and working with us building this company.
+    2. You establish the technological foundation for the development of the Destinations product.<br>
+    Besides that, you are passionate about contributing to the product vision with your own ideas and concepts and complement our user centric design approach with your tech perspective.<br>
+    As a co-founder, you will also be an committed ambassador of Destinations, helping us to grow our common network. We value diversity and inclusion and pursue the goal having a well-balanced founding team. Therefore we woud like to strongly encourage people from underrepresented groups: let's have a chat!

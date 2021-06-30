@@ -95,7 +95,7 @@ layout: default
         <div class="feature-grid-item content-box-small">
             {% include random-shapes.html%}
             <p class="heading-h4"><a href="/features.html#Database">Signage Database</a></p>
-            <p>It keeps track of everythig so you don’t have to.</p>
+            <p>Automated signage database for all your created routes and templates.</p>
         </div>
         <div class="feature-grid-item content-box-small">
             {% include random-shapes.html%}
@@ -105,7 +105,7 @@ layout: default
         <div class="feature-grid-item content-box-small">
             {% include random-shapes.html%}
             <h2 class="heading-h4"><a href="/features.html#Simulation">Simulation</a></h2>
-            <p>It keeps track of everythig so you don’t have to.</p>
+            <p>Simulate and test your developed signage systems in 3D.</p>
         </div>
     </div>
 </section>
