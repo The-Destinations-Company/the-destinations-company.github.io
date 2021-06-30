@@ -21,7 +21,14 @@
   profile-img: /assets/img/team/jwellnitz.jpg
   profile-job: Designer & Co-Founder
   profile-text: |
-    Member introduction placeholder. Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you.
+    Johanna is a product designer at <a href="https://www.pitch.com"> Pitch </a> in Berlin. Like Kai Magnus and Martin she has a background in Interaction Design and for a short time, designed expert systems and websites in an agency.  
+    
+    In her work she switches between abstract thinking and crafting the details of a design to keep high level goals in mind while also driving decisions forward. 
+  links:
+    github-link: https://github.com/johannawe
+    twitter-link: https://twitter.com/johannawellnitz
+    linkedin-link: https://www.linkedin.com/in/johanna-wellnitz-297060181/
+    web-link: http://www.johannawellnitz.de
 - name: You?
   profile-img:
   profile-text: >-
