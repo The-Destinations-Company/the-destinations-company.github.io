@@ -22,17 +22,17 @@ layout: default
             <div class="content-box-small">
                 <img height="100" width="100" src="assets/img/shapes/shape-1.svg" alt=""/>
                 <h2 class="heading-h4">Focus 1</h2>
-                <p class="">Aid designers in analyzing project sites</p>
+                <p class="">Aid designers in analyzing project sites.</p>
             </div>
             <div class="content-box-small">
                 <img height="100" width="100" src="assets/img/shapes/shape-2.svg" alt=""/>
                 <h2 class="heading-h4">Focus 2</h2>
-                <p class="">Eliminate repetitive tasks – simplify management of signage databases?</p>
+                <p class="">Eliminate repetitive tasks and simplify management of signage databases.</p>
             </div>
             <div class="content-box-small">
                 <img height="100" width="100" src="assets/img/shapes/shape-3.svg" alt=""/>
                 <h2 class="heading-h4">Focus 3</h2>
-                <p class="">Use simulation to preview sign concepts before production?</p>
+                <p class="">Use simulation to preview sign concepts before production.</p>
             </div>
         </div>
     </div>
